@@ -3,11 +3,11 @@ import './Nav.css';
 const Nav = () => {
     return(
         <nav>
-            <h1>LolData</h1>
+            <h1>LOLDATA</h1>
             <ul>
-                <li>Dashboard</li>
-                <li>Compare</li>
-                <li>Timeline</li>
+                <a href='/'><li>Dashboard</li></a>
+                <a href='/Compare'><li>Compare</li></a>
+                <a href='/Timeline'><li>Timeline</li></a>
                 
             </ul>
         </nav>

@@ -11,4 +11,15 @@ font-family: 'Exo', sans-serif; BODY COPY */
 
 body{
   background-color: #131B23;
+  padding: 50px;
+  user-select: none; /* supported by Chrome and Opera */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
 }
+
+.intro h2{
+  color: #A379C9;
+}
+

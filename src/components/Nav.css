@@ -10,12 +10,15 @@ nav {
     border-radius: 20px;
     margin: 20px;
     padding: 10px;
+    float: left;
+    justify-content: space-between;
 }
 
 h1{
     font-family: 'Archivo Black', sans-serif;
     text-align: center;
     font-size: 24px;
+    color: white;
 }
 
 li{
@@ -32,3 +35,9 @@ li:hover{
     background-color: rgba(255, 255, 255, 0.6);
     transition: 0.2s;
 }
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
