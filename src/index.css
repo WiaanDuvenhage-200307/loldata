@@ -10,7 +10,8 @@ font-family: 'Exo', sans-serif; BODY COPY */
 }
 
 body{
-  background-color: #131B23;
+  background: rgb(19,27,35);
+  background: linear-gradient(47deg, rgba(19,27,35,1) 0%, rgba(82,68,108,1) 59%, rgba(163,121,201,1) 100%);
   padding: 50px;
   user-select: none; /* supported by Chrome and Opera */
   -webkit-user-select: none; /* Safari */

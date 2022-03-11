@@ -5,13 +5,12 @@ font-family: 'Exo', sans-serif; BODY COPY */
 
 nav {
     width: 20%;
-    background-color: #A379C9;
+    background-color: black;
     height: 100vh;
     border-radius: 20px;
-    margin: 20px;
+    margin-right: 20px;
     padding: 10px;
     float: left;
-    justify-content: space-between;
 }
 
 h1{
@@ -29,15 +28,18 @@ li{
     text-align: center;
     padding: 20px;
     border-radius: 20px;
+    color: #A379C9;
 }
 
 li:hover{
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: white;
     transition: 0.2s;
+    color: black;
 }
 
 a{
     text-decoration: none;
     color: black;
 }
+
 

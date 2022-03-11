@@ -2,9 +2,9 @@
 
 /* font-family: 'Archivo Black', sans-serif; MAIN FONT
 font-family: 'Exo', sans-serif; BODY COPY */
-h2{
+.intro h2{
     font-family: 'Archivo Black', sans-serif;
-    color: white;
+    color: #000000;
     font-size: 46px;
 }
 
@@ -19,14 +19,15 @@ h3, p{
 
 .graph-block{
     margin: 20px;
-    width: 50%;
+    width: 30%;
     border-radius: 30px;
     box-shadow: 7px 10px 20px 5px rgba(0,0,0,0.75);
     -webkit-box-shadow: 7px 10px 20px 5px rgba(0,0,0,0.75);
     -moz-box-shadow: 7px 10px 20px 5px rgba(0,0,0,0.75);
     float: left;
     text-align: center;
-    height: 50vh;
+    height: 30vh;
+    background-color: black;
 }
 
 .bg-img{
@@ -53,3 +54,4 @@ h3, p{
 .about{
     float: right;
 }
+
