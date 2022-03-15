@@ -6,9 +6,9 @@ const Nav = () => {
         <nav>
             <h1>LOLDATA</h1>
             <ul>
-                <a href='/'><li><i class="fa-solid fa-gauge"></i>Dashboard</li></a>
-                <a href='/Compare'><li><i class="fa-solid fa-scale-balanced"></i>Compare</li></a>
-                <a href='/Timeline'><li><i class="fa-solid fa-timeline"></i>Timeline</li></a>
+                <a href='/'><li className='dashboard'><i class="fa-solid fa-gauge"></i>Dashboard</li></a>
+                <a href='/Compare'><li className='compare'><i class="fa-solid fa-scale-balanced"></i>Compare</li></a>
+                <a href='/Timeline'><li className='timeline'><i class="fa-solid fa-timeline"></i>Timeline</li></a>
                 
             </ul>
         </nav>

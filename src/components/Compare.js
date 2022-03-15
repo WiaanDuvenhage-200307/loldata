@@ -1,7 +1,7 @@
 import './Compare.css';
 import axios from 'axios';
 
-axios.get('https://api.sportsdata.io/v3/lol/scores/json/Teams?key=94c287b249d74701adf60e03aa398884')
+axios.get('https://api.sportsdata.io/v3/lol/stats/json/Champions?key=94c287b249d74701adf60e03aa398884')
 .then((res) =>{
     console.log(res);
 })
@@ -27,6 +27,14 @@ const Compare = () => {
                 <br/>
                 <p>Want to know what Champion is the best? Compare them here</p>
             </div>
+
+            
+            <div className='graph-block'>
+
+            <h2>Block</h2>
+
+            </div>
+
         </>
     )
 }
