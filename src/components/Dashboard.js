@@ -1,8 +1,10 @@
 import './Dashboard.css';
 import axios from 'axios';
+import PieChart from '../components/charts/PieChart';
+import { Pie } from 'react-chartjs-2';
 
-// ! Teams API Call
-axios.get('https://api.sportsdata.io/v3/lol/scores/json/Teams?key=94c287b249d74701adf60e03aa398884')
+// ! Players API Call | get all players roles and make Pie Chart
+axios.get('https://api.sportsdata.io/v3/lol/scores/json/Players?key=94c287b249d74701adf60e03aa398884')
 .then((res) =>{
     console.log(res);
 })
@@ -12,13 +14,13 @@ axios.get('https://api.sportsdata.io/v3/lol/scores/json/Teams?key=94c287b249d747
 
 
 // ! Players with active memberships with teams.
-axios.get('https://api.sportsdata.io/v3/lol/scores/json/ActiveMemberships?key=94c287b249d74701adf60e03aa398884')
-.then((res) =>{
-    console.log(res);
-})
-.catch((err) =>{
-    console.log(err);
-})
+// axios.get('https://api.sportsdata.io/v3/lol/scores/json/ActiveMemberships?key=94c287b249d74701adf60e03aa398884')
+// .then((res) =>{
+//     console.log(res);
+// })
+// .catch((err) =>{
+//     console.log(err);
+// })
 
 
 
@@ -49,42 +51,9 @@ const Dashboard = () => {
         
         {/* Turn into pie chart */}
         <div className='graph-block pie'>
-            <h2>Region Teams</h2>
+            <h2>Roles</h2>
             
-            <div className="region-group">
-                <h3>North America</h3>
-                <p>31</p>
-            </div>
-
-            <div className="region-group">
-                <h3>Latin America</h3>
-                <p>31</p>
-            </div>
-
-            <div className="region-group">
-                <h3>Europe</h3>
-                <p>31</p>
-            </div>
-
-            <div className="region-group">
-                <h3>Turkey</h3>
-                <p>31</p>
-            </div>
-
-            <div className="region-group">
-                <h3>China</h3>
-                <p>31</p>
-            </div>
-
-            <div className="region-group">
-                <h3>Japan</h3>
-                <p>31</p>
-            </div>
-
-            <div className="region-group">
-                <h3>Korea</h3>
-                <p>31</p>
-            </div>
+            <PieChart/>
         </div>
 
         {/* MAKE BAR CHART */}

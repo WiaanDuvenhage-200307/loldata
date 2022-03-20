@@ -1,6 +1,7 @@
 import './Compare.css';
 import axios from 'axios';
 
+// ! Champions API Call
 axios.get('https://api.sportsdata.io/v3/lol/stats/json/Champions?key=94c287b249d74701adf60e03aa398884')
 .then((res) =>{
     console.log(res);
