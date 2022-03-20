@@ -2,6 +2,11 @@
 
 /* font-family: 'Archivo Black', sans-serif; MAIN FONT
 font-family: 'Exo', sans-serif; BODY COPY */
+
+.intro{
+    width: 75%;
+}
+
 .intro h2{
     font-family: 'Archivo Black', sans-serif;
     color: #000000;
@@ -11,6 +16,7 @@ font-family: 'Exo', sans-serif; BODY COPY */
 h3, p{
     font-family: 'Exo', sans-serif;
     color: white;
+    width: 100%;
 }
 
 .intro{
