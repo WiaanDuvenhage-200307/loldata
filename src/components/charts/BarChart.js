@@ -1,8 +1,8 @@
 import React from "react";
-import { Pie } from "react-chartjs-2";
 import 'chart.js/auto';
+import { Bar } from "react-chartjs-2";
 import axios from 'axios';
-import './PieChart.css'
+import './BarChart.css'
 
 // ! Make Pie Chart from all players roles
 axios.get('https://api.sportsdata.io/v3/lol/scores/json/Players?key=94c287b249d74701adf60e03aa398884')
@@ -13,10 +13,10 @@ axios.get('https://api.sportsdata.io/v3/lol/scores/json/Players?key=94c287b249d7
     console.log(err);
 })
 
-const PieChart = () =>{
+const BarChart = () =>{
     return(
         <div className="exCon chart">
-            <Pie data={{
+            <Bar data={{
                 labels: ['Top', 'Jungle', 'Mid', 'ADC', 'Support'],
                 datasets: [{
                     label: '# of Votes',
@@ -47,4 +47,4 @@ const PieChart = () =>{
     )
 }
 
-export default PieChart;
+export default BarChart;

@@ -1,7 +1,7 @@
 import './Dashboard.css';
 import axios from 'axios';
 import PieChart from '../components/charts/PieChart';
-import { Pie } from 'react-chartjs-2';
+import BarChart from '../components/charts/BarChart';
 
 // ! Players API Call | get all players roles and make Pie Chart
 axios.get('https://api.sportsdata.io/v3/lol/scores/json/Players?key=94c287b249d74701adf60e03aa398884')
@@ -51,7 +51,7 @@ const Dashboard = () => {
         
         {/* Turn into pie chart */}
         <div className='graph-block pie'>
-            <h2>Roles</h2>
+            <h2>Players per Role</h2>
             
             <PieChart/>
         </div>
@@ -60,7 +60,7 @@ const Dashboard = () => {
         <div className='graph-block'>
 
             <h2>Active Players</h2>
-
+            <BarChart/>
         </div>
 
         <div className='graph-block'>

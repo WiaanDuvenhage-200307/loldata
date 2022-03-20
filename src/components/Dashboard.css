@@ -26,8 +26,12 @@ h3, p{
     -moz-box-shadow: 7px 10px 20px 5px rgba(0,0,0,0.75);
     float: left;
     text-align: center;
-    height: auto;
+    height: 100px;
     background-color: black;
+}
+
+.graph-block h2{
+    font-size: 36px;
 }
 
 .bg-img{
@@ -59,12 +63,6 @@ h3, p{
     float: left;
     margin: 20px;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center
-    /* TODO | REMOVE FLEXBOX PROPERTIES WHEN INSERTING PIE CHART; */
 }
-
 
 
