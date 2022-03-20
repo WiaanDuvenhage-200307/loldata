@@ -67,11 +67,14 @@ const Dashboard = () => {
 
             <h2>Player Stats</h2>
 
+            <BarChart/>
+
         </div>
 
         <div className='graph-block'>
 
             <h2>Player Stats</h2>
+            <BarChart/>
 
         </div>
     </>
