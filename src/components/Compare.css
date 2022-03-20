@@ -7,6 +7,7 @@ h2{
     font-family: 'Archivo Black', sans-serif;
     color: white;
     font-size: 46px;
+    text-align: center;
 }
 
 h3, p{
@@ -16,6 +17,12 @@ h3, p{
 
 .intro{
     float: left;
+}
+
+.intro h1{
+    color: black;
+    font-size: 48px;
+    text-align: left;
 }
 
 .search{
@@ -35,7 +42,7 @@ h3, p{
     float: right;
 }
 
-.graph-block{
+.compare-block, .output{
     margin: 20px;
     width: 30%;
     border-radius: 30px;
@@ -48,3 +55,49 @@ h3, p{
     background-color: black;
 }
 
+h4{
+    color: white;
+    font-family: 'Exo', sans-serif;
+    margin: 10px;
+}
+
+h6{
+    color: white;
+}
+
+select{
+    margin: 10px;
+    width: auto;
+    padding: 20px;
+    background-color: #A379C9;
+    font-family: 'Exo', sans-serif;
+    font-size: 18px;
+    color: white;
+    border-radius: 20px;
+}
+
+.result h2{
+    float: left;
+    margin-top: 100px;
+}
+
+.output p{
+    text-align: left;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.output h3{
+    font-family: 'Archivo Black', sans-serif;
+}
+
+.output i{
+   color: white;
+   float: left;
+   margin-left: 20px;
+   margin-right: 10px;
+}
+
+.output img{
+    width: 100%;
+}
