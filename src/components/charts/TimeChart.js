@@ -3,20 +3,29 @@ import { Bar } from "react-chartjs-2";
 import 'chart.js/auto';
 import axios from 'axios';
 import './TimeChart.css'
+import 'chartjs-adapter-date-fns';
 
 const TimeChart = () =>{
     return(
         <div className="exCon chart">
             <Bar data={{
-                labels: ['Top', 'Jungle', 'Mid', 'ADC', 'Support'],
+                labels: ['LCS', 'LEC', 'LPL', 'LCK', 'MSI', 'Worlds'],
                 datasets: [{
-                    label: '# of Votes',
-                    data: [12, 19, 3, 5, 2],
+                    label: 'Tournaments',
+                    data: [
+                        ['2022-02-05', '2022-04-25'],
+                        ['2022-01-12', '2022-03-25'],
+                        ['2022-02-06', '2022-02-09'],
+                        ['2022-02-09', '2022-02-13'],
+                        ['2022-02-13', '2022-02-15'],
+                        ['2022-02-15', '2022-02-17']
+                    ],
                     backgroundColor: [
                         '#A379C9',
                         '#F7F7F9',
                         '#FBFF12',
                         '#131B23',
+                        '#134074',
                         '#134074'
                     ],
                     borderColor: [
@@ -27,15 +36,31 @@ const TimeChart = () =>{
                         'rgba(153, 102, 255, 1)',
                         'rgba(255, 159, 64, 1)'
                     ],
-                    borderWidth: 0
+                    barPercentage: 0.2
                 }]}}
                 height = {400}
                 width = {400}
-                options={{maintainAspectRatio: false}}
+                options={{
+                    maintainAspectRatio: false,
+                    indexAxis : 'y',
+                    scales: {
+                        x: {
+                            min: '2022-02-01',
+                            type: 'time',
+                            time: {
+                                unit: 'day'
+                            }
+                        },
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }}
             
             />
         </div>
     )
+
 }
 
 export default TimeChart;
