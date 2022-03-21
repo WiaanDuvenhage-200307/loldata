@@ -1,4 +1,5 @@
 import './Timeline.css'
+import TimeChart from './charts/TimeChart';
 
 const Timeline = () => {
     return(
@@ -16,6 +17,12 @@ const Timeline = () => {
                 <h2>TIMELINE</h2>
                 <br/>
                 <p>Want to know the timeline of your favourite Esports team or when tournaments are held? Take a look here!</p>
+            </div>
+
+            <div className='graph-block pie'>
+                <h2>Tournaments</h2>
+                
+                <TimeChart/>
             </div>
         </>
     )
