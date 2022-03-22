@@ -11,7 +11,7 @@ const TimeChart = () =>{
             <Bar data={{
                 labels: ['LCS', 'LEC', 'LPL', 'LCK', 'MSI', 'Worlds'],
                 datasets: [{
-                    label: 'Tournaments',
+                    label: 'Tournament Duration',
                     data: [
                         ['2022-02-05', '2022-04-25'],
                         ['2022-01-12', '2022-03-25'],

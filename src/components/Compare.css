@@ -20,11 +20,10 @@ h3, p{
 }
 
 .intro h1{
-    color: black;
+    color: #FBFF12;
     font-size: 48px;
     text-align: left;
 }
-
 .search{
     width: 20%;
     border-radius: 30px;
