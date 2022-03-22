@@ -4,7 +4,7 @@ import 'chart.js/auto';
 import axios from 'axios';
 import './RadarChart.css'
 
-const RadarChart = () => {
+const Radar2 = () => {
     return(
         <div className="exCon chart">
             <Radar data={{
@@ -12,9 +12,9 @@ const RadarChart = () => {
 
                 datasets: [{
                     label: 'Statistic',
-                    data: [250, 56, 11, 75, 2],
+                    data: [100, 34, 5, 80, 5],
                     backgroundColor: [
-                        'rgba(163, 121, 201, 0.5)'
+                        'rgba(0, 255, 0, 0.5)'
                     ],
                     borderColor: [
                         'rgb(163, 121, 201)',
@@ -50,4 +50,4 @@ const RadarChart = () => {
     )
 }
 
-export default RadarChart;
+export default Radar2;

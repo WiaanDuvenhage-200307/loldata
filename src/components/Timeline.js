@@ -19,7 +19,7 @@ const Timeline = () => {
                 <p>Here is a timeline for when all the major tournaments are held throughout the year!</p>
             </div>
 
-            <div className='graph-block pie'>
+            <div className='time-block pie'>
                 <h2>Tournaments</h2>
                 
                 <TimeChart/>

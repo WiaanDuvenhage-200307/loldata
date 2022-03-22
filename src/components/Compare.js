@@ -3,6 +3,7 @@ import './Compare.css';
 import axios from 'axios';
 import "https://kit.fontawesome.com/3d7d8906d0.js";
 import RadarChart from '../components/charts/RadarChart';
+import Radar2 from '../components/charts/Radar2';
 
 // ! Champions API Call
 axios.get('https://api.sportsdata.io/v3/lol/stats/json/Champions?key=94c287b249d74701adf60e03aa398884')
@@ -78,7 +79,7 @@ const Compare = () => {
                 <div className='output'>
                     <h3>Champion 2</h3>
                     <img src='https://lolstatic-a.akamaihd.net/frontpage/apps/prod/rg-champion-aatrox/en_GB/5b922bef08881410f8fffa7273c30a75dfb1d11f/assets/downloads/wallpapers/aatrox-1920x1080.jpg'/>
-                    <RadarChart/>
+                    <Radar2/>
                 </div>
 
             </div>

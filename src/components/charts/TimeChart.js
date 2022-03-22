@@ -26,7 +26,7 @@ const TimeChart = () =>{
                         '#FBFF12',
                         '#131B23',
                         '#134074',
-                        '#134074'
+                        'Red'
                     ],
                     borderColor: [
                         'rgba(255, 99, 132, 1)',
