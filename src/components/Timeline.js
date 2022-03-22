@@ -16,7 +16,7 @@ const Timeline = () => {
             <div className='intro'>
                 <h2>TIMELINE</h2>
                 <br/>
-                <p>Want to know the timeline of your favourite Esports team or when tournaments are held? Take a look here!</p>
+                <p>Here is a timeline for when all the major tournaments are held throughout the year!</p>
             </div>
 
             <div className='graph-block pie'>

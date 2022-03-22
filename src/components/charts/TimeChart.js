@@ -36,7 +36,7 @@ const TimeChart = () =>{
                         'rgba(153, 102, 255, 1)',
                         'rgba(255, 159, 64, 1)'
                     ],
-                    barPercentage: 0.2
+                    barPercentage: 0.5
                 }]}}
                 height = {600}
                 width = {600}

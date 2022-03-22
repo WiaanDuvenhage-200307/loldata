@@ -11,6 +11,7 @@ font-family: 'Exo', sans-serif; BODY COPY */
     font-family: 'Archivo Black', sans-serif;
     color: #000000;
     font-size: 46px;
+    text-align: left;
 }
 
 h3, p{

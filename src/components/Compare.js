@@ -2,6 +2,7 @@ import React from 'react';
 import './Compare.css';
 import axios from 'axios';
 import "https://kit.fontawesome.com/3d7d8906d0.js";
+import RadarChart from '../components/charts/RadarChart';
 
 // ! Champions API Call
 axios.get('https://api.sportsdata.io/v3/lol/stats/json/Champions?key=94c287b249d74701adf60e03aa398884')
@@ -66,33 +67,21 @@ const Compare = () => {
 
             <div className='result'>
 
-                <div className='output'> //! Champions from dropdown will be displayed here
+                <div className='output'> 
                     <h3>Champion Name</h3>
                     <img src='https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Annie_0.jpg'/>
-                    <i class="fa-solid fa-heart"></i><p>HP</p>
-                    <i class="fa-solid fa-khanda"></i><p>Attack</p>
-                    <i class="fa-solid fa-shield-halved"></i><p>Defense</p>
-                    <i class="fa-brands fa-audible"></i><p>Attack Range</p>
-                    <i class="fa-solid fa-shield"></i><p>Armor</p>
+                    <RadarChart/>
                 </div>
 
                 <h2>VS</h2>
 
-                <div className='output'> //! 
+                <div className='output'>
                     <h3>Champion 2</h3>
                     <img src='https://lolstatic-a.akamaihd.net/frontpage/apps/prod/rg-champion-aatrox/en_GB/5b922bef08881410f8fffa7273c30a75dfb1d11f/assets/downloads/wallpapers/aatrox-1920x1080.jpg'/>
-                    <i class="fa-solid fa-heart"></i><p>HP</p>
-                    <i class="fa-solid fa-khanda"></i><p>Attack</p>
-                    <i class="fa-solid fa-shield-halved"></i><p>Defense</p>
-                    <i class="fa-brands fa-audible"></i><p>Attack Range</p>
-                    <i class="fa-solid fa-shield"></i><p>Armor</p>
+                    <RadarChart/>
                 </div>
 
             </div>
-
-           
-
-            
 
         </>
     )

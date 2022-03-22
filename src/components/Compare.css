@@ -55,6 +55,10 @@ h3, p{
     background-color: black;
 }
 
+.output{
+    background-color: white;
+}
+
 h4{
     color: white;
     font-family: 'Exo', sans-serif;
@@ -89,6 +93,7 @@ select{
 
 .output h3{
     font-family: 'Archivo Black', sans-serif;
+    color: black;
 }
 
 .output i{
