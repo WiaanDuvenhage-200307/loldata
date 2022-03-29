@@ -33,11 +33,31 @@ const Dashboard = () => {
         axios.get("https://api.sportsdata.io/v3/lol/scores/json/Players?key=94c287b249d74701adf60e03aa398884")
         .then((res)=>{
             let data = res.data;
-            console.log(data);
 
-           let topLane = data.filter((item) => item.position === "Jungle").length;
+           const topLaners = [];
+           const midLaners = [];
+           const junglers = [];
+           const bottomLaners = [];
+           const support = []
 
-           console.log(topLane);
+           for( let i = 0; i < 300; i++) {
+               if(data[i].Position === "Top"){
+                   topLaners.push({
+                       total : data[i].Position
+                   })
+               } else if (data[i].Position === "Jungle"){
+                   junglers.push({
+                       total: data[i].Position
+                   })
+               } else {
+                   midLaners.push({
+                       total: data[i].Position
+                   })
+               }
+               
+           }
+
+           console.log(topLaners);
         })
     }, [])
     
