@@ -2,15 +2,16 @@ import './Dashboard.css';
 import axios from 'axios';
 import PieChart from '../components/charts/PieChart';
 import BarChart from '../components/charts/BarChart';
+import {useState, useEffect, useRef} from 'react';
 
 // ! Players API Call | get all players roles and make Pie Chart
-axios.get('https://api.sportsdata.io/v3/lol/scores/json/Players?key=94c287b249d74701adf60e03aa398884')
-.then((res) =>{
-    console.log(res);
-})
-.catch((err) =>{
-    console.log(err);
-})
+// axios.get('https://api.sportsdata.io/v3/lol/scores/json/Players?key=94c287b249d74701adf60e03aa398884')
+// .then((res) =>{
+//     console.log(res);
+// })
+// .catch((err) =>{
+//     console.log(err);
+// })
 
 
 // ! Players with active memberships with teams.
@@ -25,6 +26,20 @@ axios.get('https://api.sportsdata.io/v3/lol/scores/json/Players?key=94c287b249d7
 
 
 const Dashboard = () => {
+
+    const [barChartInfo, setBarChartInfo] = useState([]);
+
+   useEffect(()=>{
+        axios.get("https://api.sportsdata.io/v3/lol/scores/json/Players?key=94c287b249d74701adf60e03aa398884")
+        .then((res)=>{
+            let data = res.data;
+            console.log(data);
+
+           let topLane = data.filter((item) => item.position === "Jungle").length;
+
+           console.log(topLane);
+        })
+    }, [])
     
     return(
 
