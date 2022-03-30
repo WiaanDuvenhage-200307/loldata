@@ -2,7 +2,7 @@ import './Dashboard.css';
 import axios from 'axios';
 import PieChart from '../components/charts/PieChart';
 import BarChart from '../components/charts/BarChart';
-import {useState, useEffect, useRef} from 'react';
+
 
 // ! Players API Call | get all players roles and make Pie Chart
 // axios.get('https://api.sportsdata.io/v3/lol/scores/json/Players?key=94c287b249d74701adf60e03aa398884')
@@ -27,39 +27,7 @@ import {useState, useEffect, useRef} from 'react';
 
 const Dashboard = () => {
 
-    const [barChartInfo, setBarChartInfo] = useState([]);
-
-   useEffect(()=>{
-        axios.get("https://api.sportsdata.io/v3/lol/scores/json/Players?key=94c287b249d74701adf60e03aa398884")
-        .then((res)=>{
-            let data = res.data;
-
-           const topLaners = [];
-           const midLaners = [];
-           const junglers = [];
-           const bottomLaners = [];
-           const support = []
-
-           for( let i = 0; i < 300; i++) {
-               if(data[i].Position === "Top"){
-                   topLaners.push({
-                       total : data[i].Position
-                   })
-               } else if (data[i].Position === "Jungle"){
-                   junglers.push({
-                       total: data[i].Position
-                   })
-               } else {
-                   midLaners.push({
-                       total: data[i].Position
-                   })
-               }
-               
-           }
-
-           console.log(topLaners);
-        })
-    }, [])
+    
     
     return(
 
@@ -70,17 +38,11 @@ const Dashboard = () => {
            <p>About the API</p>
         </div>
 
-        <div className='search'>
-            <p>Search...</p>
-        </div>
-
-        
-
         <div className='intro'>
             <h2>WELCOME</h2>
             <h3>Analyze.Compare.Watch</h3>
             <br/>
-            <p>Keep track of League of Legends Esports Players and tournaments & compare champions statistics!</p>
+            <p className='more-info'>Keep track of League of Legends Esports Players and tournaments & compare champions statistics!</p>
         </div>
 
         

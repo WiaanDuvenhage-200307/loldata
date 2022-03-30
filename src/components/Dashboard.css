@@ -1,46 +1,44 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Exo:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Exo:wght@300&display=swap");
 
 /* font-family: 'Archivo Black', sans-serif; MAIN FONT
 font-family: 'Exo', sans-serif; BODY COPY */
 
-.intro{
-    width: 75%;
+.intro {
+  width: 70%;
+  float: left;
 }
 
-.intro h2{
-    font-family: 'Archivo Black', sans-serif;
-    color: #FBFF12;
-    font-size: 46px;
-    text-align: left;
+.intro h2 {
+  font-family: "Archivo Black", sans-serif;
+  color: #fbff12;
+  font-size: 46px;
+  text-align: left;
 }
 
-h3, p{
-    font-family: 'Exo', sans-serif;
-    color: white;
-    width: 100%;
+h3,
+p {
+  font-family: "Exo", sans-serif;
+  color: white;
+  width: 100%;
 }
 
-.intro{
-    float: left;
+.graph-block {
+  margin-right: 20px;
+  width: 15%;
+  border-radius: 30px;
+  box-shadow: 7px 10px 20px 5px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 7px 10px 20px 5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 7px 10px 20px 5px rgba(0, 0, 0, 0.75);
+  float: left;
+  text-align: center;
+  background-color: black;
 }
 
-.graph-block{
-    margin: 20px;
-    width: 30%;
-    border-radius: 30px;
-    box-shadow: 7px 10px 20px 5px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 7px 10px 20px 5px rgba(0,0,0,0.75);
-    -moz-box-shadow: 7px 10px 20px 5px rgba(0,0,0,0.75);
-    float: left;
-    text-align: center;
-    background-color: black;
+.graph-block h2 {
+  font-size: 36px;
 }
 
-.graph-block h2{
-    font-size: 36px;
-}
-
-.bg-img{
+.bg-img {
   height: 100%;
   width: 100%;
   background-position: center;
@@ -48,34 +46,32 @@ h3, p{
   background-size: cover;
 }
 
-.search{
-    width: 20%;
-    border-radius: 30px;
-    border: 3px #A379C9 solid;
-    float: right;
-    padding: 10px;
-    margin-right: 30px;
+.search {
+  width: 20%;
+  border-radius: 30px;
+  border: 3px #a379c9 solid;
+  float: right;
+  padding: 10px;
+  margin-right: 30px;
 }
 
-.search p{
-    color: red;
+.search p {
+  color: red;
 }
 
-.about{
-    float: right;
+.about {
+  float: right;
 }
 
-.about p:hover{
-    background-color: #FBFF12;
-    color: black;
-    padding: 5px;
-    transition: 0.3s ease-in-out;
+.about p:hover {
+  background-color: #fbff12;
+  color: black;
+  padding: 5px;
+  transition: 0.3s ease-in-out;
 }
 
-.region-group{
-    float: left;
-    margin: 20px;
-    text-align: center;
+.region-group {
+  float: left;
+  margin: 0px;
+  text-align: center;
 }
-
-
