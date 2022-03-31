@@ -11,7 +11,7 @@ const TimeChart = () =>{
             <Bar data={{
                 labels: ['LCS', 'LEC', 'LPL', 'LCK', 'MSI', 'Worlds'],
                 datasets: [{
-                    label: 'Tournament Duration',
+                    label: ['Tournament Duration'],
                     data: [
                         ['2022-02-05', '2022-04-25'],
                         ['2022-01-12', '2022-03-25'],
@@ -21,12 +21,11 @@ const TimeChart = () =>{
                         ['2022-10-15', '2022-11-25']
                     ],
                     backgroundColor: [
-                        '#A379C9',
-                        '#F7F7F9',
-                        '#FBFF12',
-                        '#131B23',
-                        '#134074',
-                        'Red'
+                        '#5233FB',
+                        '#D5BEC6',
+                        '#ECECEC',
+                        '#E2C1A2',
+                        '#4D4D55'
                     ],
                     borderColor: [
                         'rgba(255, 99, 132, 1)',

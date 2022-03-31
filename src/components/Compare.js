@@ -18,67 +18,51 @@ const Compare = () => {
     return(
         <>
 
-            <div className='about'>
-            <p>About LOLDATA</p>
-            <p>About the API</p>
-            </div>
-
-            <div className='search'>
-                <p>Search...</p>
-            </div>
-
             <div className='intro'>
-                <h1>COMPARE</h1>
-                <br/>
-                <h3>Compare Champions with each other. <br/>
-                They will be compared on their <strong>HP</strong>, <strong>Mana</strong>, <strong>Armor</strong>, <strong>Attack</strong> & <strong>Defense</strong>. </h3>
+                <h2>Compare</h2>
+                <h3>Who is the strongest?<br/></h3>
+                <p>Compare champions on their <strong>HP</strong>, <strong>Mana</strong>, <strong>Armor</strong>, <strong>Attack</strong> & <strong>Defense</strong>. </p>
             </div>
-
-            <h2>Choose your champion</h2>
-            <div className='compare-block'>
+            
+            <div className='search-block'>
 
                 {/* Would use this for compare page! */}
-                <div className="exCon">
-                    <h4>The Champion has selected: Champion</h4>
-                    <select>
-                        <option>Annie</option>
-                        <option>Aatrox</option>
-                        <option>Alistar</option>
-                    </select>
+                <div>
+                    <div className='search'>
+                        <input type="search" id='champion-search' placeholder='e.g Annie'/>
+                    </div>
+                    <button className='btn-prim'>Search</button>
                 </div>
 
             </div>
 
-            <div className='compare-block'>
+            
 
+            <div className='search-block'>
 
                 {/* Would use this for compare page! */}
-                <div className="exCon">
-                    <h4>The Champion has selected: Champion</h4>
-                    <select>
-                        <option>Option One</option>
-                        <option>Option Two</option>
-                        <option>Option Three</option>
-                    </select>
-                </div>
+                <div>
 
-                
+                    <div className='search'>
+                        <input type="search" id='champion-search' placeholder='e.g Annie'/>
+                    </div>
+                    <button className='btn-prim'>Search</button>
+                </div>
 
             </div>
 
             <div className='result'>
 
-                <div className='output'> 
-                    <h3>Champion Name</h3>
-                    <img src='https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Annie_0.jpg'/>
+                <div className='graph-block'> 
+                    <h3>ANNIE</h3>
+                    <img src='https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Annie_0.jpg' width="50%"/>
                     <RadarChart/>
                 </div>
 
-                <h2>VS</h2>
 
-                <div className='output'>
-                    <h3>Champion 2</h3>
-                    <img src='https://lolstatic-a.akamaihd.net/frontpage/apps/prod/rg-champion-aatrox/en_GB/5b922bef08881410f8fffa7273c30a75dfb1d11f/assets/downloads/wallpapers/aatrox-1920x1080.jpg'/>
+                <div className='graph-block'>
+                    <h3>AATROX</h3>
+                    <img src='https://lolstatic-a.akamaihd.net/frontpage/apps/prod/rg-champion-aatrox/en_GB/5b922bef08881410f8fffa7273c30a75dfb1d11f/assets/downloads/wallpapers/aatrox-1920x1080.jpg' width="50%"/>
                     <Radar2/>
                 </div>
 

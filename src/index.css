@@ -1,18 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Exo:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Exo:wght@300&display=swap");
 
 /* font-family: 'Archivo Black', sans-serif; MAIN FONT
 font-family: 'Exo', sans-serif; BODY COPY */
 
-*{
+* {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
-body{
-  background: rgb(19,27,35);
-  background: linear-gradient(47deg, rgba(19,27,35,1) 0%, rgba(82,68,108,1) 59%, rgba(163,121,201,1) 100%);
+body {
+  background-color: #171721;
   padding-right: 50px;
+  padding-top: 50px;
   user-select: none; /* supported by Chrome and Opera */
   -webkit-user-select: none; /* Safari */
   -khtml-user-select: none; /* Konqueror HTML */
@@ -20,7 +19,6 @@ body{
   -ms-user-select: none; /* Internet Explorer/Edge */
 }
 
-.intro h2{
-  color: #A379C9;
+.intro h2 {
+  color: #a379c9;
 }
-

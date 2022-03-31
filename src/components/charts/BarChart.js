@@ -22,11 +22,11 @@ const BarChart = () =>{
                     label: '# of Votes',
                     data: [12, 19, 3, 5, 2],
                     backgroundColor: [
-                        '#A379C9',
-                        '#F7F7F9',
-                        '#FBFF12',
-                        '#131B23',
-                        '#134074'
+                        '#5233FB',
+                        '#D5BEC6',
+                        '#ECECEC',
+                        '#E2C1A2',
+                        '#4D4D55'
                     ],
                     borderColor: [
                         'rgba(255, 99, 132, 1)',

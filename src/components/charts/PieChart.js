@@ -36,23 +36,27 @@ const PieChart = () =>{
             label: 'player amount per role',
             data: pieChartInfo,
             backgroundColor: [
-                '#A379C9',
-                '#F7F7F9',
-                '#FBFF12',
-                '#131B23',
-                '#134074'
+                '#5233FB',
+                '#D5BEC6',
+                '#ECECEC',
+                '#E2C1A2',
+                '#4D4D55'
             ],
             borderColor: [
                 'rgba(255, 99, 132, 1)',
                 'rgba(54, 162, 235, 1)'
             ],
             borderWidth: 0
-        }]
+        }],
+        height: [30],
+        options:{
+            maintainAspectRatio: false
+        }
         
     }
 
     return(
-        <div className="exCon chart">
+        <div className="exCon pieChart">
             <Pie data={chart}/>
         </div>
     )

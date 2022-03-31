@@ -32,17 +32,11 @@ const Dashboard = () => {
     return(
 
     <>
-
-        <div className='about'>
-           <p>About LOLDATA</p>
-           <p>About the API</p>
-        </div>
-
         <div className='intro'>
-            <h2>WELCOME</h2>
+            <h2>Dashboard</h2>
             <h3>Analyze.Compare.Watch</h3>
-            <br/>
             <p className='more-info'>Keep track of League of Legends Esports Players and tournaments & compare champions statistics!</p>
+            <br/>
         </div>
 
         
@@ -64,13 +58,6 @@ const Dashboard = () => {
 
             <h2>Player Stats</h2>
 
-            <BarChart/>
-
-        </div>
-
-        <div className='graph-block'>
-
-            <h2>Player Stats</h2>
             <BarChart/>
 
         </div>

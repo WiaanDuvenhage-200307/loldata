@@ -1,45 +1,68 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Exo:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Exo:wght@300&display=swap");
 
 /* font-family: 'Archivo Black', sans-serif; MAIN FONT
 font-family: 'Exo', sans-serif; BODY COPY */
 
 nav {
-    width: 20%;
-    background-color: black;
-    height: 100vh;
-    border-radius: 20px;
-    margin-right: 20px;
-    padding: 10px;
-    float: left;
+  width: 10%;
+  background-color: #171721;
+  height: 100vh;
+  border-radius: 20px;
+  margin-right: 20px;
+  padding: 10px;
+  float: left;
 }
 
-h1{
-    font-family: 'Archivo Black', sans-serif;
-    text-align: center;
-    font-size: 24px;
-    color: white;
+h1 {
+  font-family: "Archivo Black", sans-serif;
+  text-align: center;
+  font-size: 24px;
+  color: white;
 }
 
-li{
-    list-style: none;
-    font-family: 'Exo', sans-serif;
-    font-size: 20px;
-    margin: 40px;
-    text-align: center;
-    padding: 20px;
-    border-radius: 20px;
-    color: #A379C9;
+li {
+  list-style: none;
+  font-family: "Exo", sans-serif;
+  font-size: 20px;
+  margin: 40px;
+  text-align: center;
+  border-radius: 20px;
+  color: #4d4d55;
 }
 
-li:hover{
-    background-color: #FBFF12;
-    transition: 0.2s;
-    color: black;
+li:hover {
+  transition: 0.2s;
+  color: #ececec;
 }
 
-a{
-    text-decoration: none;
-    color: black;
+ul {
+  position: relative;
+  top: 200px;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
 
+.about p {
+  position: relative;
+  top: 200px;
+  right: 25px;
+  color: #4d4d55;
+  margin-top: 10px;
+}
+
+.about p:hover {
+  text-decoration: underline;
+  color: #ececec;
+  transition: 0.3s ease-in-out;
+  float: left;
+}
+
+img {
+  text-align: center;
+  position: relative;
+  left: 40px;
+  color: red;
+}
