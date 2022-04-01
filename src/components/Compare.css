@@ -137,3 +137,9 @@ input {
 .graph-block {
   padding: 10px;
 }
+
+.championNames ul li {
+  width: 50%;
+  display: block;
+  margin: 0px;
+}

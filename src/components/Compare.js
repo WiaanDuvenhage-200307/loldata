@@ -7,16 +7,20 @@ import Radar2 from '../components/charts/Radar2';
 import {useEffect, useState, useRef} from 'react';
 
 const Compare = () => {
-    
+
+    const[allChampions, setAllChampions] = useState();
+
+
     useEffect(() => {
         axios.get('https://api.sportsdata.io/v3/lol/stats/json/Champions?key=94c287b249d74701adf60e03aa398884')
         .then((res) => {
             let data = res.data;
-            console.log(data)
+
+            let allNames = data.map((item) => item.Name); //|| To get champion info to display on below card and populate chart
+
+            setAllChampions(allNames);
         })
-    })
-
-
+    }, [])
     return(
         <>
 
@@ -34,6 +38,12 @@ const Compare = () => {
                         <input type="search" id='champion-search' placeholder='e.g Annie'/>
                     </div>
                     <button className='btn-prim'>Search</button>
+                </div>
+
+                <div className='championNames'>
+                    <ul>
+                        <li>{allChampions}</li>
+                    </ul>
                 </div>
 
             </div>
