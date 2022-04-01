@@ -2,25 +2,53 @@ import React from 'react';
 import './Compare.css';
 import axios from 'axios';
 import "https://kit.fontawesome.com/3d7d8906d0.js";
-import RadarChart from '../components/charts/RadarChart';
-import Radar2 from '../components/charts/Radar2';
 import {useEffect, useState, useRef} from 'react';
+import CompareCard from './CompareCard';
 
 const Compare = () => {
 
+    const[getData, setGetData] = useState([]);
     const[allChampions, setAllChampions] = useState();
+
+    const champPeep = useRef();
+    const champPeepTwo = useRef();
 
 
     useEffect(() => {
         axios.get('https://api.sportsdata.io/v3/lol/stats/json/Champions?key=94c287b249d74701adf60e03aa398884')
         .then((res) => {
-            let data = res.data;
+            setGetData(res.data)
 
-            let allNames = data.map((item) => item.Name); //|| To get champion info to display on below card and populate chart
+            let allNames = getData.map((item) => item.Name); //|| To get champion info to display on below card and populate chart
 
             setAllChampions(allNames);
         })
     }, [])
+
+    const getChampion = () => {
+        let individualChamp = champPeep.current.value;
+        console.log(individualChamp);
+
+        
+
+        for(let i = 0; i < getData.length; i++){
+            if(getData[i].Name === individualChamp){
+                console.log("True");
+            }
+    } //! Can't I just create a prop inside of this and populate the card considering I'm running an if() statement to check if it matches?
+    } //Get Champion name and check to see if it is found in the API
+
+    const getSecondChampion = () => {
+        let individualChampTwo = champPeepTwo.current.value;
+        console.log(individualChampTwo);
+
+        for(let i = 0; i < getData.length; i++){
+            if(getData[i].Name === individualChampTwo){
+                console.log("True")
+            }
+        }
+    } //Get Champion name and check to see if it is found in the API
+
     return(
         <>
 
@@ -35,14 +63,14 @@ const Compare = () => {
                 {/* Would use this for compare page! */}
                 <div>
                     <div className='search'>
-                        <input type="search" id='champion-search' placeholder='e.g Annie'/>
+                        <input ref={champPeep} type="search" id='champion-search' placeholder='e.g Annie'/>
                     </div>
-                    <button className='btn-prim'>Search</button>
+                    <button onClick={getChampion} className='btn-prim'>Search</button>
                 </div>
 
                 <div className='championNames'>
                     <ul>
-                        <li>{allChampions}</li>
+                        {/* <li>{allChampions}</li> */}
                     </ul>
                 </div>
 
@@ -56,27 +84,18 @@ const Compare = () => {
                 <div>
 
                     <div className='search'>
-                        <input type="search" id='champion-search' placeholder='e.g Annie'/>
+                        <input ref={champPeepTwo} type="search" id='champion-search' placeholder='e.g Annie'/>
                     </div>
-                    <button className='btn-prim'>Search</button>
+                    <button onClick={getSecondChampion} className='btn-prim'>Search</button>
                 </div>
 
             </div>
 
             <div className='result'>
 
-                <div className='graph-block'> 
-                    <h3>ANNIE</h3>
-                    <img src='https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Annie_0.jpg' width="50%"/>
-                    <RadarChart/>
-                </div>
+            <CompareCard/>
 
-
-                <div className='graph-block'>
-                    <h3>AATROX</h3>
-                    <img src='https://lolstatic-a.akamaihd.net/frontpage/apps/prod/rg-champion-aatrox/en_GB/5b922bef08881410f8fffa7273c30a75dfb1d11f/assets/downloads/wallpapers/aatrox-1920x1080.jpg' width="50%"/>
-                    <Radar2/>
-                </div>
+            <CompareCard />
 
             </div>
 
