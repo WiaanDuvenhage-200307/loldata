@@ -11,7 +11,7 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 
 const DoughnutChart = () =>{
 
-    const [pieChartInfo, setPieChartInfo] = useState([]);
+    const [doughnutChartInfo, setDoughnutChartInfo] = useState([]);
 
    useEffect(()=>{
         axios.get("https://api.sportsdata.io/v3/lol/scores/json/Players?key=94c287b249d74701adf60e03aa398884")
@@ -24,17 +24,17 @@ const DoughnutChart = () =>{
             let bottomLaners = data.filter((item)=> item.Position === "ADC").length;
             let supports = data.filter((item)=> item.Position === "Support").length;
 
-            setPieChartInfo([topLaners, junglers, midLaners, bottomLaners, supports]);
+            setDoughnutChartInfo([topLaners, junglers, midLaners, bottomLaners, supports]);
         })
     }, [])
 
-    console.log(pieChartInfo);
+    console.log(doughnutChartInfo);
 
     const chart = {
         labels: ["Top", "Jungle", "Mid", "ADC", "Support"],
         datasets: [{
             label: 'player amount per role',
-            data: pieChartInfo,
+            data: doughnutChartInfo,
             backgroundColor: [
                 '#5233FB',
                 '#D5BEC6',
@@ -56,7 +56,7 @@ const DoughnutChart = () =>{
     }
 
     return(
-        <div className="exCon pieChart">
+        <div className="exCon doughnutChart">
             <Doughnut data={chart}/>
         </div>
     )
