@@ -1,6 +1,6 @@
 import './Dashboard.css';
 import axios from 'axios';
-import PieChart from '../components/charts/PieChart';
+import PieChart from './charts/DoughnutChart';
 import BarChart from '../components/charts/BarChart';
 
 

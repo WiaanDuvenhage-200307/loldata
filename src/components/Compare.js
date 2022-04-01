@@ -4,17 +4,19 @@ import axios from 'axios';
 import "https://kit.fontawesome.com/3d7d8906d0.js";
 import RadarChart from '../components/charts/RadarChart';
 import Radar2 from '../components/charts/Radar2';
-
-// ! Champions API Call
-axios.get('https://api.sportsdata.io/v3/lol/stats/json/Champions?key=94c287b249d74701adf60e03aa398884')
-.then((res) =>{
-    console.log(res);
-})
-.catch((err) =>{
-    console.log(err);
-})
+import {useEffect, useState, useRef} from 'react';
 
 const Compare = () => {
+    
+    useEffect(() => {
+        axios.get('https://api.sportsdata.io/v3/lol/stats/json/Champions?key=94c287b249d74701adf60e03aa398884')
+        .then((res) => {
+            let data = res.data;
+            console.log(data)
+        })
+    })
+
+
     return(
         <>
 

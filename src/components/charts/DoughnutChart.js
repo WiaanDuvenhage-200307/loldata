@@ -1,15 +1,15 @@
 import React from "react";
-import { Pie } from "react-chartjs-2";
+import { Doughnut } from "react-chartjs-2";
 import 'chart.js/auto';
 import axios from 'axios';
-import './PieChart.css'
+import './DoughnutChart.css'
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import {useState, useEffect, useRef} from 'react';
 
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-const PieChart = () =>{
+const DoughnutChart = () =>{
 
     const [pieChartInfo, setPieChartInfo] = useState([]);
 
@@ -57,9 +57,9 @@ const PieChart = () =>{
 
     return(
         <div className="exCon pieChart">
-            <Pie data={chart}/>
+            <Doughnut data={chart}/>
         </div>
     )
 }
 
-export default PieChart;
+export default DoughnutChart;
