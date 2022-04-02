@@ -8,7 +8,7 @@ import RadarChart from '../components/charts/RadarChart';
 const Compare = () => {
 
     const[getData, setGetData] = useState([]);
-    const[allChampions, setAllChampions] = useState();
+    // const[allChampions, setAllChampions] = useState();
     const [showChampion, setShowChampion] = useState();
     const [championTitle, setChampionTitle] = useState();
 
@@ -26,7 +26,7 @@ const Compare = () => {
 
             let allNames = getData.map((item) => item.Name); //|| To get champion info to display on below card and populate chart
 
-            setAllChampions(allNames);
+            // setAllChampions(allNames);
         })
     }, [])
 
