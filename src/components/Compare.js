@@ -15,6 +15,8 @@ const Compare = () => {
     const [showChampionTwo, setShowChampionTwo] = useState();
     const [championTitleTwo, setChampionTitleTwo] = useState();
 
+    const [radarData, setRadarData] = useState([]);
+
     const champPeep = useRef();
     const champPeepTwo = useRef();
 
@@ -34,15 +36,29 @@ const Compare = () => {
         let individualChamp = champPeep.current.value;
         console.log(individualChamp);
 
-        
+    
 
         for(let i = 0; i < getData.length; i++){
+
+
+
+
             if(getData[i].Name === individualChamp){
                 // console.log(getData[i]);
                 setShowChampion(individualChamp);
                 setChampionTitle(getData[i].Title);
+
+                let hitPoints = getData.filter((item)=> item.Hp);
+                let attack = getData.filter((item)=> item.Attack);
+                let defense = getData.filter((item)=> item.Defense);
+                let attackRange = getData.filter((item)=> item.AttackRange);
+                let armor = getData.filter((item)=> item.Armor);
+
+                setRadarData([hitPoints, attack, defense, attackRange, armor]);
+
+                console.log(radarData);
             }
-    } //! Can't I just create a prop inside of this and populate the card considering I'm running an if() statement to check if it matches?
+    } //! Why does this not work
     } //Get Champion name and check to see if it is found in the API
 
     const getSecondChampion = () => {
@@ -57,6 +73,31 @@ const Compare = () => {
             }
         }
     } //Get Champion name and check to see if it is found in the API
+
+    const chart = {
+        labels: ["HP", "Attack", "Defense", "Attack Range", "Armor"],
+        datasets: [{
+            label: 'player amount per role',
+            data: radarData,
+            backgroundColor: [
+                '#5233FB',
+                '#D5BEC6',
+                '#ECECEC',
+                '#E2C1A2',
+                '#4D4D55'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)'
+            ],
+            borderWidth: 0
+        }],
+        height: [30],
+        options:{
+            maintainAspectRatio: false
+        }
+        
+    }
 
     return(
         <>
@@ -105,7 +146,7 @@ const Compare = () => {
             <div className='graph-block'> 
                 <h3>{showChampion}</h3>
                 <h4>{championTitle}</h4>
-                <RadarChart/>
+                <RadarChart data={chart}/>
             </div>
 
             <div className='graph-block'> 
