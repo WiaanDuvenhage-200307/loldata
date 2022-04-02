@@ -35,13 +35,8 @@ const Compare = () => {
     const getChampion = () => {
         let individualChamp = champPeep.current.value;
         console.log(individualChamp);
-
     
-
         for(let i = 0; i < getData.length; i++){
-
-
-
 
             if(getData[i].Name === individualChamp){
                 // console.log(getData[i]);
@@ -56,9 +51,12 @@ const Compare = () => {
 
                 setRadarData([hitPoints, attack, defense, attackRange, armor]);
 
-                console.log(radarData);
+                
+
             }
-    } //! Why does this not work
+
+        } //! Why does this not work
+
     } //Get Champion name and check to see if it is found in the API
 
     const getSecondChampion = () => {
