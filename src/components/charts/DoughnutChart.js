@@ -4,7 +4,7 @@ import 'chart.js/auto';
 import axios from 'axios';
 import './DoughnutChart.css'
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
-import {useState, useEffect, useRef} from 'react';
+import {useState, useEffect} from 'react';
 
 
 ChartJS.register(ArcElement, Tooltip, Legend);
