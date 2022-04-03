@@ -50,9 +50,7 @@ const Compare = () => {
                 let armor = getData.filter((item)=> item.Armor);
 
                 setRadarData([hitPoints, attack, defense, attackRange, armor]);
-
-                
-
+                console.log(radarData) //returns empty array don't know why
             }
 
         } //! Why does this not work
