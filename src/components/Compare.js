@@ -177,11 +177,11 @@ const Compare = () => {
                     }}
             
                 />
-                <p>Hit Points:</p> <h1>{radarData[0]}</h1>
-                <p>Attack:</p> <h1>{radarData[1]}</h1>
-                <p>Defense:</p> <h1>{radarData[2]}</h1>
-                <p>Attack Range:</p> <h1>{radarData[3]}</h1>
-                <p>Armor:</p> <h1>{radarData[4]}</h1>
+                <span><p>Hit Points:</p> <h1>{radarData[0]}</h1></span>
+                <span><p>Attack:</p> <h1>{radarData[1]}</h1></span>
+                <span><p>Defense:</p> <h1>{radarData[2]}</h1></span>
+                <span><p>Attack Range:</p> <h1>{radarData[3]}</h1></span>
+                <span><p>Armor:</p> <h1>{radarData[4]}</h1></span>
             </div>
 
             <div className='graph-block'> 
@@ -237,11 +237,11 @@ const Compare = () => {
                     }}
             
                 />
-                <p>Hit Points:</p> <h1>{radarData2[0]}</h1>
-                <p>Attack:</p> <h1>{radarData2[1]}</h1>
-                <p>Defense:</p> <h1>{radarData2[2]}</h1>
-                <p>Attack Range:</p> <h1>{radarData2[3]}</h1>
-                <p>Armor:</p> <h1>{radarData2[4]}</h1>
+                <span><p>Hit Points:</p> <h1>{radarData2[0]}</h1></span>
+                <span><p>Attack:</p> <h1>{radarData2[1]}</h1></span>
+                <span><p>Defense:</p> <h1>{radarData2[2]}</h1></span>
+                <span><p>Attack Range:</p> <h1>{radarData2[3]}</h1></span>
+                <span><p>Armor:</p> <h1>{radarData2[4]}</h1></span>
             </div>
                     
             </div>
