@@ -7,7 +7,7 @@ import RadarChart from '../components/charts/RadarChart';
 
 const Compare = () => {
 
-    const[getData, setGetData] = useState([]);
+    const[getData, setGetData] = useState();
     // const[allChampions, setAllChampions] = useState();
     const [showChampion, setShowChampion] = useState();
     const [championTitle, setChampionTitle] = useState();
@@ -33,27 +33,27 @@ const Compare = () => {
     }, [])
 
     const getChampion = () => {
-        let individualChamp = champPeep.current.value;
-        console.log(individualChamp);
+        
     
         for(let i = 0; i < getData.length; i++){
-
+            let individualChamp = champPeep.current.value;
             if(getData[i].Name === individualChamp){
                 // console.log(getData[i]);
+                
                 setShowChampion(individualChamp);
                 setChampionTitle(getData[i].Title);
 
-                let hitPoints = getData.filter((item)=> item.Hp);
-                let attack = getData.filter((item)=> item.Attack);
-                let defense = getData.filter((item)=> item.Defense);
-                let attackRange = getData.filter((item)=> item.AttackRange);
-                let armor = getData.filter((item)=> item.Armor);
+                let hitPoints = getData[i].Hp
+                let attack = getData[i].Attack;
+                let defense = getData[i].Defense;
+                let attackRange = getData[i].AttackRange;
+                let armor = getData[i].Armor;
 
                 setRadarData([hitPoints, attack, defense, attackRange, armor]);
                 console.log(radarData) //returns empty array don't know why
             }
 
-        } //! Why does this not work
+        } //! Have to click search twice to update array to new array
 
     } //Get Champion name and check to see if it is found in the API
 
@@ -74,7 +74,7 @@ const Compare = () => {
         labels: ["HP", "Attack", "Defense", "Attack Range", "Armor"],
         datasets: [{
             label: 'player amount per role',
-            data: radarData,
+            data: {radarData},
             backgroundColor: [
                 '#5233FB',
                 '#D5BEC6',
@@ -109,7 +109,7 @@ const Compare = () => {
                 {/* Would use this for compare page! */}
                 <div>
                     <div className='search'>
-                        <input ref={champPeep} type="search" id='champion-search' placeholder='e.g Annie'/>
+                        <input ref={champPeep} type="search" id='champion-search' placeholder='e.g Annie' />
                     </div>
                     <button onClick={getChampion} className='btn-prim'>Search</button>
                 </div>

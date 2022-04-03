@@ -111,6 +111,8 @@ input {
   float: left;
   margin-right: 30px;
   position: relative;
+  color: #ececec;
+  font-family: "Exo";
 }
 
 .btn-prim {
