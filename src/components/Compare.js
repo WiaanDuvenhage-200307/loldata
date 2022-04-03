@@ -130,16 +130,28 @@ const Compare = () => {
                     labels: ['HP', 'Attack', 'Defense', 'Attack Range', 'Armor'],
 
                     datasets: [{
-                        label: 'Statistic',
+                        label: showChampion,
                         data: radarData,
                         backgroundColor: [
-                            'rgba(163, 121, 201, 0.5)'
+                            'rgba(82, 51, 251, 0.5)'
                         ],
                         borderColor: [
-                            'rgb(163, 121, 201)',
+                            'rgb(82, 51, 251)',
+                        ],
+                        borderWidth: 2,
+                    },
+                   {
+                        label: showChampionTwo,
+                        data: radarData2,
+                        backgroundColor: [
+                            'rgba(213, 190, 198, 0.3)'
+                        ],
+                        borderColor: [
+                            'rgb(213, 190, 198)',
                         ],
                         borderWidth: 2,
                     }],
+                    
                 }}
                     height = {400}
                     width = {400}
@@ -154,7 +166,7 @@ const Compare = () => {
                                 color: 'white'
                             },
                             pointLabels:{
-                                    color: '#A379C9',
+                                    color: 'rgb(82, 51, 251)',
                                     font: 'bold'
                             },
                             ticks: {
@@ -165,6 +177,11 @@ const Compare = () => {
                     }}
             
                 />
+                <p>Hit Points:</p> <h1>{radarData[0]}</h1>
+                <p>Attack:</p> <h1>{radarData[1]}</h1>
+                <p>Defense:</p> <h1>{radarData[2]}</h1>
+                <p>Attack Range:</p> <h1>{radarData[3]}</h1>
+                <p>Armor:</p> <h1>{radarData[4]}</h1>
             </div>
 
             <div className='graph-block'> 
@@ -174,13 +191,24 @@ const Compare = () => {
                     labels: ['HP', 'Attack', 'Defense', 'Attack Range', 'Armor'],
 
                     datasets: [{
-                        label: 'Statistic',
+                        label: showChampionTwo,
                         data: radarData2,
                         backgroundColor: [
-                            'rgba(163, 121, 201, 0.5)'
+                            'rgba(213, 190, 198, 0.5)'
                         ],
                         borderColor: [
-                            'rgb(163, 121, 201)',
+                            'rgb(213, 190, 198)',
+                        ],
+                        borderWidth: 2,
+                    },
+                    {
+                        label: showChampion,
+                        data: radarData,
+                        backgroundColor: [
+                            'rgba(82, 51, 251, 0.5)'
+                        ],
+                        borderColor: [
+                            'rgb(82, 51, 251)',
                         ],
                         borderWidth: 2,
                     }],
@@ -209,8 +237,13 @@ const Compare = () => {
                     }}
             
                 />
+                <p>Hit Points:</p> <h1>{radarData2[0]}</h1>
+                <p>Attack:</p> <h1>{radarData2[1]}</h1>
+                <p>Defense:</p> <h1>{radarData2[2]}</h1>
+                <p>Attack Range:</p> <h1>{radarData2[3]}</h1>
+                <p>Armor:</p> <h1>{radarData2[4]}</h1>
             </div>
-
+                    
             </div>
 
         </>
