@@ -3,9 +3,20 @@ import { Bar } from "react-chartjs-2";
 import 'chart.js/auto';
 import axios from 'axios';
 import './TimeChart.css'
+import {useState, useEffect, useRef} from 'react';
 import 'chartjs-adapter-date-fns';
 
 const TimeChart = () =>{
+    const [getData, setGetData] = useState();
+    const [dates, setDates] = useState([]);
+
+    useEffect(() =>{
+        axios.get("https://api.sportsdata.io/v3/lol/scores/json/Competitions?key=94c287b249d74701adf60e03aa398884")
+        .then((res) =>{
+            let data = res.data;
+           console.log(data);
+        })
+    },[])
     return(
         <div className="timeChart">
             <div className="exCon chart">
