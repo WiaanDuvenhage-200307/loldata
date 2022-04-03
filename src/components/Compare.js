@@ -1,9 +1,10 @@
 import React from 'react';
 import './Compare.css';
 import axios from 'axios';
+import 'chart.js/auto';
+import { Radar } from 'react-chartjs-2';
 import "https://kit.fontawesome.com/3d7d8906d0.js";
 import {useEffect, useState, useRef} from 'react';
-import RadarChart from '../components/charts/RadarChart';
 
 const Compare = () => {
 
@@ -16,6 +17,7 @@ const Compare = () => {
     const [championTitleTwo, setChampionTitleTwo] = useState();
 
     const [radarData, setRadarData] = useState([]);
+    const [radarData2, setRadarData2] = useState([]);
 
     const champPeep = useRef();
     const champPeepTwo = useRef();
@@ -26,19 +28,19 @@ const Compare = () => {
         .then((res) => {
             setGetData(res.data)
 
-            let allNames = getData.map((item) => item.Name); //|| To get champion info to display on below card and populate chart
+            console.log(radarData);//|| To get champion info to display on below card and populate chart
+            console.log(radarData2);
 
-            // setAllChampions(allNames);
-        })
-    }, [])
-
-    const getChampion = () => {
         
+        })
+    }, [radarData && radarData2]); //when both radardata AND radardata2 characters have been searched, display them to the DOM
     
+    const getChampion = () => {
         for(let i = 0; i < getData.length; i++){
             let individualChamp = champPeep.current.value;
             if(getData[i].Name === individualChamp){
                 // console.log(getData[i]);
+                console.log(individualChamp);
                 
                 setShowChampion(individualChamp);
                 setChampionTitle(getData[i].Title);
@@ -50,7 +52,6 @@ const Compare = () => {
                 let armor = getData[i].Armor;
 
                 setRadarData([hitPoints, attack, defense, attackRange, armor]);
-                console.log(radarData) //returns empty array don't know why
             }
 
         } //! Have to click search twice to update array to new array
@@ -66,34 +67,17 @@ const Compare = () => {
                 // console.log(getData[i]);
                 setShowChampionTwo(individualChampTwo);
                 setChampionTitleTwo(getData[i].Title);
+
+                let hitPoints2 = getData[i].Hp
+                let attack2 = getData[i].Attack;
+                let defense2 = getData[i].Defense;
+                let attackRange2 = getData[i].AttackRange;
+                let armor2 = getData[i].Armor;
+
+                setRadarData2([hitPoints2, attack2, defense2, attackRange2, armor2]);
             }
         }
     } //Get Champion name and check to see if it is found in the API
-
-    const chart = {
-        labels: ["HP", "Attack", "Defense", "Attack Range", "Armor"],
-        datasets: [{
-            label: 'player amount per role',
-            data: {radarData},
-            backgroundColor: [
-                '#5233FB',
-                '#D5BEC6',
-                '#ECECEC',
-                '#E2C1A2',
-                '#4D4D55'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)'
-            ],
-            borderWidth: 0
-        }],
-        height: [30],
-        options:{
-            maintainAspectRatio: false
-        }
-        
-    }
 
     return(
         <>
@@ -142,13 +126,89 @@ const Compare = () => {
             <div className='graph-block'> 
                 <h3>{showChampion}</h3>
                 <h4>{championTitle}</h4>
-                <RadarChart data={chart}/>
+                <Radar data={{
+                    labels: ['HP', 'Attack', 'Defense', 'Attack Range', 'Armor'],
+
+                    datasets: [{
+                        label: 'Statistic',
+                        data: radarData,
+                        backgroundColor: [
+                            'rgba(163, 121, 201, 0.5)'
+                        ],
+                        borderColor: [
+                            'rgb(163, 121, 201)',
+                        ],
+                        borderWidth: 2,
+                    }],
+                }}
+                    height = {400}
+                    width = {400}
+                    options={{
+                        maintainAspectRatio: true,
+                        scales: {
+                        r: {
+                            angleLines: {
+                                color: 'white'
+                            },
+                            grid: {
+                                color: 'white'
+                            },
+                            pointLabels:{
+                                    color: '#A379C9',
+                                    font: 'bold'
+                            },
+                            ticks: {
+                                color: 'white', 
+                            } 
+                        }
+                        }
+                    }}
+            
+                />
             </div>
 
             <div className='graph-block'> 
                 <h3>{showChampionTwo}</h3>
                 <h4>{championTitleTwo}</h4>
-                <RadarChart/>
+                <Radar data={{
+                    labels: ['HP', 'Attack', 'Defense', 'Attack Range', 'Armor'],
+
+                    datasets: [{
+                        label: 'Statistic',
+                        data: radarData2,
+                        backgroundColor: [
+                            'rgba(163, 121, 201, 0.5)'
+                        ],
+                        borderColor: [
+                            'rgb(163, 121, 201)',
+                        ],
+                        borderWidth: 2,
+                    }],
+                }}
+                    height = {400}
+                    width = {400}
+                    options={{
+                        maintainAspectRatio: true,
+                        scales: {
+                        r: {
+                            angleLines: {
+                                color: 'white'
+                            },
+                            grid: {
+                                color: 'white'
+                            },
+                            pointLabels:{
+                                    color: '#A379C9',
+                                    font: 'bold'
+                            },
+                            ticks: {
+                                color: 'white', 
+                            } 
+                        }
+                        }
+                    }}
+            
+                />
             </div>
 
             </div>
