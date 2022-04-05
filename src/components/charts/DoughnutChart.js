@@ -49,6 +49,7 @@ const DoughnutChart = () =>{
             borderWidth: 0
         }],
         height: [30],
+        width: [30],
         options:{
             maintainAspectRatio: false
         }

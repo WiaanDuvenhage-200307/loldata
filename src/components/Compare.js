@@ -38,11 +38,11 @@ const Compare = () => {
     const getChampion = () => {
         for(let i = 0; i < getData.length; i++){
             let individualChamp = champPeep.current.value;
-            if(getData[i].Name === individualChamp){
-                // console.log(getData[i]);
+            if(getData[i].Name.toLowerCase() === individualChamp.toLowerCase()){
+                console.log(getData);
                 console.log(individualChamp);
                 
-                setShowChampion(individualChamp);
+                setShowChampion(individualChamp.toUpperCase());
                 setChampionTitle(getData[i].Title);
 
                 let hitPoints = getData[i].Hp
@@ -63,9 +63,9 @@ const Compare = () => {
         console.log(individualChampTwo);
 
         for(let i = 0; i < getData.length; i++){
-            if(getData[i].Name === individualChampTwo){
+            if(getData[i].Name.toLowerCase() === individualChampTwo.toLowerCase()){
                 // console.log(getData[i]);
-                setShowChampionTwo(individualChampTwo);
+                setShowChampionTwo(individualChampTwo.toUpperCase());
                 setChampionTitleTwo(getData[i].Title);
 
                 let hitPoints2 = getData[i].Hp
@@ -78,6 +78,10 @@ const Compare = () => {
             }
         }
     } //Get Champion name and check to see if it is found in the API
+
+    const filterChampions = () => {
+
+    }
 
     return(
         <>
@@ -93,7 +97,7 @@ const Compare = () => {
                 {/* Would use this for compare page! */}
                 <div>
                     <div className='search'>
-                        <input ref={champPeep} type="search" id='champion-search' placeholder='e.g Annie' />
+                        <input onChange={filterChampions} ref={champPeep} type="search" id='champion-search' placeholder='e.g Annie' />
                     </div>
                     <button onClick={getChampion} className='btn-prim'>Search</button>
                 </div>
@@ -123,7 +127,7 @@ const Compare = () => {
 
             <div className='result'>
 
-            <div className='graph-block'> 
+            <div className='graph-block radar'> 
                 <h3>{showChampion}</h3>
                 <h4>{championTitle}</h4>
                 <Radar data={{
@@ -184,7 +188,7 @@ const Compare = () => {
                 <span><p>Armor:</p> <h1>{radarData[4]}</h1></span>
             </div>
 
-            <div className='graph-block'> 
+            <div className='graph-block radar'> 
                 <h3>{showChampionTwo}</h3>
                 <h4>{championTitleTwo}</h4>
                 <Radar data={{

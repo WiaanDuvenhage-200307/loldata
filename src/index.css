@@ -18,7 +18,3 @@ body {
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* Internet Explorer/Edge */
 }
-
-.intro h2 {
-  color: #a379c9;
-}

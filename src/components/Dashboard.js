@@ -36,10 +36,8 @@ const Dashboard = () => {
             <h2>Dashboard</h2>
             <h3>Analyze.Compare.Watch</h3>
             <p className='more-info'>Keep track of League of Legends Esports Players and tournaments & compare champions statistics!</p>
-            <br/>
         </div>
 
-        
         {/* Turn into pie chart */}
         <div className='graph-block pie'>
             <h2>Players per Role</h2>
@@ -48,19 +46,25 @@ const Dashboard = () => {
         </div>
 
         {/* MAKE BAR CHART */}
-        <div className='graph-block'>
+        <div className='graph-block bar'>
 
             <h2>Active Players</h2>
             <BarChart/>
         </div>
 
-        <div className='graph-block'>
+        <div className='graph-block bar'>
 
             <h2>Player Stats</h2>
 
             <BarChart/>
 
         </div>
+
+        <div className='graph-block total-players'>
+            <h3>Look at the amount of pro players there are currently!</h3>
+        </div>
+
+        
     </>
     )
     

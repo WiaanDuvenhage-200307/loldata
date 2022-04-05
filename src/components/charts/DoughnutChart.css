@@ -1,4 +1,4 @@
-.DoughnutChart {
-  margin: 0 auto;
-  height: 80vh;
+.pie {
+  width: 33% !important;
+  height: auto;
 }

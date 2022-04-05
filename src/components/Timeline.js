@@ -11,7 +11,7 @@ const Timeline = () => {
             </div>
 
            
-            <div className='graph-block'>
+            <div className='time-block'>
                 <h2>Tournaments</h2>
                 
                 <TimeChart/>
