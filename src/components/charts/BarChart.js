@@ -23,10 +23,10 @@ const BarChart = () =>{
                     data: [12, 19, 3, 5, 2],
                     backgroundColor: [
                         '#5233FB',
-                        '#D5BEC6',
-                        '#ECECEC',
-                        '#E2C1A2',
-                        '#4D4D55'
+                        '#775FFC',
+                        '#664BFB',
+                        '#4323FB',
+                        '#3310F9'
                     ],
                     borderColor: [
                         'rgba(255, 99, 132, 1)',

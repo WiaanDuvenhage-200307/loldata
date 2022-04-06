@@ -34,10 +34,10 @@ const TimeChart = () =>{
                         ],
                         backgroundColor: [
                             '#5233FB',
-                            '#D5BEC6',
-                            '#ECECEC',
-                            '#E2C1A2',
-                            '#4D4D55'
+                            '#775FFC',
+                            '#664BFB',
+                            '#4323FB',
+                            '#3310F9'
                         ],
                         borderColor: [
                             'rgba(255, 99, 132, 1)',
@@ -47,7 +47,7 @@ const TimeChart = () =>{
                             'rgba(153, 102, 255, 1)',
                             'rgba(255, 159, 64, 1)'
                         ],
-                        barPercentage: 0.5
+                        barPercentage: 1
                     }]}}
                     options={{
                         maintainAspectRatio: false,
