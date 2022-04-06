@@ -143,17 +143,6 @@ const Compare = () => {
                             'rgb(82, 51, 251)',
                         ],
                         borderWidth: 2,
-                    },
-                   {
-                        label: showChampionTwo,
-                        data: radarData2,
-                        backgroundColor: [
-                            'rgba(213, 190, 198, 0.3)'
-                        ],
-                        borderColor: [
-                            'rgb(213, 190, 198)',
-                        ],
-                        borderWidth: 2,
                     }],
                     
                 }}
@@ -202,17 +191,6 @@ const Compare = () => {
                         ],
                         borderColor: [
                             'rgb(213, 190, 198)',
-                        ],
-                        borderWidth: 2,
-                    },
-                    {
-                        label: showChampion,
-                        data: radarData,
-                        backgroundColor: [
-                            'rgba(82, 51, 251, 0.5)'
-                        ],
-                        borderColor: [
-                            'rgb(82, 51, 251)',
                         ],
                         borderWidth: 2,
                     }],
