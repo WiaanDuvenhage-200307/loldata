@@ -17,9 +17,8 @@ const Nav = () => {
                     <p>About this site</p>
                     <p>About the API</p>
                 </div>
-
-                
             </ul>
+           
         </nav>
     )
 }
