@@ -38,7 +38,7 @@ const TimeChart = () =>{
             
             <div className="exCon chart">
                 <Bar data={{
-                    labels: ["player one", "player two", "player three", "player four", "player five"],
+                    labels: ["player one", "player two", "player three", "player four"],
                     datasets: [{
                         label: ['Player has been Active'],
                         data: [
