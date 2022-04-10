@@ -11,12 +11,12 @@ import 'chartjs-adapter-date-fns';
 // TODO: Change player real names to IGN using another axios request.
 // TODO: Add additional data below chart to contextualise data on chart, e.g, area of team: Australia, and if team is active.
 // https://api.sportsdata.io/v3/lol/scores/json/Players?key=94c287b249d74701adf60e03aa398884 TO GET PLAYER IGN 
-// https://api.sportsdata.io/v3/lol/scores/json/HistoricalMemberships?key=94c287b249d74701adf60e03aa398884 TO GET TEAMS
+// https://api.sportsdata.io/v3/lol/scores/json/ActiveMemberships?key=94c287b249d74701adf60e03aa398884 TO GET TEAMS
 
 const TimeChart = () =>{
     
     useEffect(() =>{
-        axios.get("https://api.sportsdata.io/v3/lol/scores/json/HistoricalMemberships?key=94c287b249d74701adf60e03aa398884")
+        axios.get("https://api.sportsdata.io/v3/lol/scores/json/ActiveMemberships?key=94c287b249d74701adf60e03aa398884")
         .then((res) =>{
             let data = res.data;
             console.log(data);
