@@ -127,49 +127,51 @@ const Compare = () => {
 
             <div className='result'>
 
-            <div className='graph-block radar'> 
+            <div className='graph-block radar-block'> 
                 <h3>{showChampion}</h3>
                 <h4>{championTitle}</h4>
-                <Radar data={{
-                    labels: ['HP', 'Attack', 'Defense', 'Attack Range', 'Armor'],
+                <div className='radar'>
+                    <Radar data={{
+                        labels: ['HP', 'Attack', 'Defense', 'Attack Range', 'Armor'],
 
-                    datasets: [{
-                        label: showChampion,
-                        data: radarData,
-                        backgroundColor: [
-                            'rgba(82, 51, 251, 0.5)'
-                        ],
-                        borderColor: [
-                            'rgb(82, 51, 251)',
-                        ],
-                        borderWidth: 2,
-                    }],
-                    
-                }}
-                    height = {400}
-                    width = {400}
-                    options={{
-                        maintainAspectRatio: true,
-                        scales: {
-                        r: {
-                            angleLines: {
-                                color: 'white'
-                            },
-                            grid: {
-                                color: 'white'
-                            },
-                            pointLabels:{
-                                    color: 'rgb(82, 51, 251)',
-                                    font: 'bold'
-                            },
-                            ticks: {
-                                color: 'white', 
-                            } 
-                        }
-                        }
+                        datasets: [{
+                            label: showChampion,
+                            data: radarData,
+                            backgroundColor: [
+                                'rgba(82, 51, 251, 0.5)'
+                            ],
+                            borderColor: [
+                                'rgb(82, 51, 251)',
+                            ],
+                            borderWidth: 2,
+                        }],
+                        
                     }}
-            
-                />
+                        height = {400}
+                        width = {400}
+                        options={{
+                            maintainAspectRatio: true,
+                            scales: {
+                            r: {
+                                angleLines: {
+                                    color: 'white'
+                                },
+                                grid: {
+                                    color: 'white'
+                                },
+                                pointLabels:{
+                                        color: 'rgb(82, 51, 251)',
+                                        font: 'bold'
+                                },
+                                ticks: {
+                                    color: 'white', 
+                                } 
+                            }
+                            }
+                        }}
+                
+                    />
+                </div>
                 <span><p>Hit Points:</p> <h1>{radarData[0]}</h1></span>
                 <span><p>Attack:</p> <h1>{radarData[1]}</h1></span>
                 <span><p>Defense:</p> <h1>{radarData[2]}</h1></span>
@@ -177,48 +179,50 @@ const Compare = () => {
                 <span><p>Armor:</p> <h1>{radarData[4]}</h1></span>
             </div>
 
-            <div className='graph-block radar'> 
+            <div className='graph-block radar-block'> 
                 <h3>{showChampionTwo}</h3>
                 <h4>{championTitleTwo}</h4>
-                <Radar data={{
-                    labels: ['HP', 'Attack', 'Defense', 'Attack Range', 'Armor'],
+                <div className='radar'>
+                    <Radar data={{
+                        labels: ['HP', 'Attack', 'Defense', 'Attack Range', 'Armor'],
 
-                    datasets: [{
-                        label: showChampionTwo,
-                        data: radarData2,
-                        backgroundColor: [
-                            'rgba(213, 190, 198, 0.5)'
-                        ],
-                        borderColor: [
-                            'rgb(213, 190, 198)',
-                        ],
-                        borderWidth: 2,
-                    }],
-                }}
-                    height = {400}
-                    width = {400}
-                    options={{
-                        maintainAspectRatio: true,
-                        scales: {
-                        r: {
-                            angleLines: {
-                                color: 'white'
-                            },
-                            grid: {
-                                color: 'white'
-                            },
-                            pointLabels:{
-                                    color: '#A379C9',
-                                    font: 'bold'
-                            },
-                            ticks: {
-                                color: 'white', 
-                            } 
-                        }
-                        }
+                        datasets: [{
+                            label: showChampionTwo,
+                            data: radarData2,
+                            backgroundColor: [
+                                'rgba(119, 95, 252, 0.6)'
+                            ],
+                            borderColor: [
+                                '#775FFC',
+                            ],
+                            borderWidth: 2,
+                        }],
                     }}
-            
-                />
+                        height = {400}
+                        width = {400}
+                        options={{
+                            maintainAspectRatio: true,
+                            scales: {
+                            r: {
+                                angleLines: {
+                                    color: 'white'
+                                },
+                                grid: {
+                                    color: 'white'
+                                },
+                                pointLabels:{
+                                        color: '#A379C9',
+                                        font: 'bold'
+                                },
+                                ticks: {
+                                    color: 'white', 
+                                } 
+                            }
+                            }
+                        }}
+                
+                    />
+                </div>    
                 <span><p>Hit Points:</p> <h1>{radarData2[0]}</h1></span>
                 <span><p>Attack:</p> <h1>{radarData2[1]}</h1></span>
                 <span><p>Defense:</p> <h1>{radarData2[2]}</h1></span>

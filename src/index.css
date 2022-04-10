@@ -11,7 +11,6 @@ font-family: 'Exo', sans-serif; BODY COPY */
 body {
   background-color: #171721;
   padding-right: 50px;
-  padding-top: 50px;
   user-select: none; /* supported by Chrome and Opera */
   -webkit-user-select: none; /* Safari */
   -khtml-user-select: none; /* Konqueror HTML */
