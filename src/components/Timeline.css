@@ -56,3 +56,19 @@ ol li {
   display: inline;
   margin: 10px;
 }
+
+select {
+  background-color: #5233fb;
+  width: 300px;
+  text-align: center;
+}
+
+.time-block {
+  background: linear-gradient(
+    16deg,
+    rgba(34, 34, 44, 1) 77%,
+    rgba(55, 41, 134, 1) 100%,
+    rgba(82, 51, 251, 1) 100%
+  );
+  box-shadow: none;
+}

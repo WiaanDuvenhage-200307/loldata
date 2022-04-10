@@ -6,24 +6,41 @@ import './TimeChart.css'
 import {useState, useEffect, useRef} from 'react';
 import 'chartjs-adapter-date-fns';
 
-const TimeChart = () =>{
-    const [getData, setGetData] = useState();
-    const [dates, setDates] = useState([]);
+// TODO: Get teams from all over the world and append dynamically to dropdown.
+// TODO: When clicking on team from dropdown run function to populate chart with its players.
+// TODO: Change player real names to IGN using another axios request.
+// TODO: Add additional data below chart to contextualise data on chart, e.g, area of team: Australia, and if team is active.
+// https://api.sportsdata.io/v3/lol/scores/json/Players?key=94c287b249d74701adf60e03aa398884 TO GET PLAYER IGN 
+// https://api.sportsdata.io/v3/lol/scores/json/HistoricalMemberships?key=94c287b249d74701adf60e03aa398884 TO GET TEAMS
 
+const TimeChart = () =>{
+    
     useEffect(() =>{
-        axios.get("https://api.sportsdata.io/v3/lol/scores/json/Competitions?key=94c287b249d74701adf60e03aa398884")
+        axios.get("https://api.sportsdata.io/v3/lol/scores/json/HistoricalMemberships?key=94c287b249d74701adf60e03aa398884")
         .then((res) =>{
             let data = res.data;
-           console.log(data);
+            console.log(data);
+            // setTournament(data.filter(({ Name }) => ["NA LCS", "LEC", "LPL", "LCK", "Mid-Season Invitational", "World Championship"].includes(Name)).map(({ Name }) => Name));
+            // console.log(tournament);
+
+            // Get Dates of all tournaments
+ 
         })
     },[])
     return(
+        <>
+        <div className="drop-down">
+            <select>
+                <option>Please Select...</option>
+            </select>
+        </div>
         <div className="timeChart">
+            
             <div className="exCon chart">
                 <Bar data={{
-                    labels: ['LCS', 'LEC', 'LPL', 'LCK', 'MSI', 'Worlds'],
+                    labels: ["player one", "player two", "player three", "player four", "player five"],
                     datasets: [{
-                        label: ['Tournament Duration'],
+                        label: ['Player has been Active'],
                         data: [
                             ['2022-02-05', '2022-04-25'],
                             ['2022-01-12', '2022-03-25'],
@@ -54,11 +71,11 @@ const TimeChart = () =>{
                         indexAxis : 'y',
                         scales: {
                             x: {
-                                min: '2022-01-01',
+                                min: '2015-01-01',
                                 max: '2022-12-31',
                                 type: 'time',
                                 time: {
-                                    unit: 'day'
+                                    unit: 'year'
                                 }
                             },
                             y: {
@@ -70,6 +87,7 @@ const TimeChart = () =>{
                 />
             </div>
         </div>
+        </>
     )
 
 }
