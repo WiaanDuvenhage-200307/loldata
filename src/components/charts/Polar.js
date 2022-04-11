@@ -3,12 +3,9 @@ import { PolarArea } from "react-chartjs-2";
 import 'chart.js/auto';
 import axios from 'axios';
 import './Polar.css'
-import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import {useState, useEffect} from 'react';
 
 const Polar = () =>{
-
-    const [chartData, setChartData] = useState([]);
 
     const [origin, setOrigin] = useState([]);
 
@@ -18,7 +15,6 @@ const Polar = () =>{
             let data = res.data;
             console.log(data);
 
-            let allOrigin = data.map((item) => item.Nationality);
             let korean = data.filter((item) => item.Nationality === "Korea Republic").length;
             let american = data.filter((item) => item.Nationality === "United States").length;
             let chinese = data.filter((item) => item.Nationality === "China PR").length;
@@ -26,9 +22,6 @@ const Polar = () =>{
             let french = data.filter((item) => item.Nationality === "France").length;
             let australian = data.filter((item) => item.Nationality === "Australia").length;
             let japanese = data.filter((item) => item.Nationality === "Japan").length;
-            let brazilian = data.filter((item) => item.Nationality === "Brazil").length; 
-            let german = data.filter((item) => item.Nationality === "Germany").length;
-            let serbian = data.filter((item) => item.Nationality === "Serbian").length;
 
             setOrigin([korean, american, chinese, denmark, french, australian, japanese]);
             
