@@ -1,31 +1,15 @@
 import './Dashboard.css';
 import axios from 'axios';
 import PieChart from './charts/DoughnutChart';
-import BarChart from '../components/charts/BarChart';
-
-
-// ! Players API Call | get all players roles and make Pie Chart
-// axios.get('https://api.sportsdata.io/v3/lol/scores/json/Players?key=94c287b249d74701adf60e03aa398884')
-// .then((res) =>{
-//     console.log(res);
-// })
-// .catch((err) =>{
-//     console.log(err);
-// })
-
-
-// ! Players with active memberships with teams.
-// axios.get('https://api.sportsdata.io/v3/lol/scores/json/ActiveMemberships?key=94c287b249d74701adf60e03aa398884')
-// .then((res) =>{
-//     console.log(res);
-// })
-// .catch((err) =>{
-//     console.log(err);
-// })
+import Polar from './charts/Polar';
+import { useEffect, useState } from 'react';
+import image from '../components/assets/2833617__1_-removebg-preview.png';
 
 
 
 const Dashboard = () => {
+
+    const [data, setData] = useState([]);
 
     
     
@@ -33,9 +17,13 @@ const Dashboard = () => {
 
     <>
         <div className='intro'>
-            <h2>Dashboard</h2>
-            <h3>Analyze.Compare.Watch</h3>
-            <p className='more-info'>Keep track of League of Legends Esports Players and tournaments & compare champions statistics!</p>
+            <h2>Greetings, Summoner</h2>
+            <div className='welcomeMsg'>
+                <h3>Welcome to LOLDATA</h3>
+                <p className='more-info'>Keep track of your favourite Esport pro's and compare champions to determine the best of the best!</p> 
+                <img className='image' src={image}/>
+            </div>
+
         </div>
 
         {/* Turn into pie chart */}
@@ -46,22 +34,16 @@ const Dashboard = () => {
         </div>
 
         {/* MAKE BAR CHART */}
-        <div className='graph-block bar'>
+        <div className='graph-block polar'>
 
-            <h2>Active Players</h2>
-            <BarChart/>
-        </div>
-
-        <div className='graph-block bar'>
-
-            <h2>Player Stats</h2>
-
-            <BarChart/>
-
+            <h2>Players Nationality</h2>
+            <Polar/>
         </div>
 
         <div className='graph-block total-players'>
-            <h3>Look at the amount of pro players there are currently!</h3>
+            <h3>Player Statistics</h3>
+
+
         </div>
 
         

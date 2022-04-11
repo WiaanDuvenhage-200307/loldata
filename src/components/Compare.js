@@ -88,8 +88,10 @@ const Compare = () => {
 
             <div className='intro'>
                 <h2>Compare</h2>
-                <h3>Who is the strongest?<br/></h3>
-                <p>Compare champions on their <strong>HP</strong>, <strong>Mana</strong>, <strong>Armor</strong>, <strong>Attack</strong> & <strong>Defense</strong>. </p>
+                <div className='welcomeMsg'>
+                <h3>Clash of the Champions</h3>
+                <p className='more-info'>Compare various champions up against each other and compare them based on their stats</p> 
+            </div>
             </div>
             
             <div className='search-block'>
