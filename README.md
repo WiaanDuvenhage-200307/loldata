@@ -46,7 +46,6 @@
 - [Concept Process](#concept-process)
   - [Ideation](#ideation)
   - [Wireframes](#wireframes)
-  - [Custom UI](#user-flow)
 - [Development Process](#development-process)
   - [Implementation Process](#implementation-process)
     - [Highlights](#highlights)
@@ -163,7 +162,7 @@ For my conceptual process, I took a look at websites such as Behance, Pinterest 
 
 ### Wireframes
 
-![image8](src/components/assets/Compare-1.jpg) -[image9](src/components/assets/Compare.jpg) -[image10](src/components/assets/Dasboard.jpg)
+![image8](src/components/assets/Compare-1.jpg) ![image9](src/components/assets/Compare.jpg) ![image10](src/components/assets/Dasboard.jpg)
 
 ## Development Process
 
