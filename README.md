@@ -79,6 +79,7 @@ Welcome to loldata, a cool project I built using React, Node.js, chart.js 2 and 
 - [JavaScript](https://www.javascript.com/)
 - [Node.js](https://nodejs.org/en/)
 - [League of Legends Sportsdata.io API](https://sportsdata.io/)
+  > This is block quotes.
 
 <!-- GETTING STARTED -->
 <!-- Make sure to add appropriate information about what prerequesite technologies the user would need and also the steps to install your project on their own mashines -->
@@ -172,16 +173,18 @@ The `Development Process` is the technical implementations and functionality don
 
 <!-- stipulated the highlight you experienced with the project -->
 
-- The highlight oft this project was hosting it and seeing user engagement appear on google analytics and just receiving feedback in general
+- The highlight of this project was definitely working with React and Chart.js, implementing them and seeing how components work together along with the API data to create a sleek front-end design.
 
 #### Challenges
 
 <!-- stipulated the challenges you faced with the project and why you think you faced it or how you think you'll solve it (if not solved) -->
 
-- I struggled to implement a scoreboard on the test page and get it to work.
-- I also struggled with figuring how Bulma works and how its classes work.
-- Something which was tricky but that I got figured out, was to add a randomizer in the character list page to re-add randomised characters to the page dynamically
-- I struggled with adding pagnation and just added a random button on my character list page.
+- I struggled a lot to grasp the idea of React props, it is still something I do not fully understand but will dig into research and mini courses on the web and start learning how props really work.
+- I could not figure out why my data on my timeline component would only render after I inspect the page or zoom out/in.
+- I struggled with getting a final design/ color scheme going, but by help from my lecturer and tools online, I could overcome that obstacle.
+- I could not implement a current time, I kept getting an error message.
+- I also could not implement a preloader that loads whilst waiting for the API data to load, but it is something that I will be researching.
+- Something I also found tricky with, was implementing data on the timeline page and making it work with the type of chart that I used on that page, but help from peers got me through it.
 
 #### Above And Beyond
 
