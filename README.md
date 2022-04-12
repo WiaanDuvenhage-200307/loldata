@@ -66,7 +66,7 @@
 
 <!-- header image of project -->
 
-![image1](assets/img/Mockup4.jpg)
+![image1](assets/Mockup1.jpg)
 
 ### Project Description
 
@@ -209,9 +209,9 @@ The aspects that I learned outside of lecture time and the brief, is that I lear
 
 <!-- TODO Change this -->
 
-![image2](assets/img/Mockup1.jpg)
-![image3](assets/img/Mockup2.jpg)
-![image4](assets/img/Mockup3.jpg)
+![image2](assets/Mockup1.jpg)
+![image3](assets/Mockup2.jpg)
+![image4](assets/Mockup3.jpg)
 <br>
 
 <!-- VIDEO DEMONSTRATION -->
