@@ -66,7 +66,7 @@
 
 <!-- header image of project -->
 
-![image1](src/components/assets/Mockup1.jpg)
+![image1](src/components/assets/Mockup4.jpg)
 
 ### Project Description
 
@@ -209,9 +209,9 @@ The aspects that I learned outside of lecture time and the brief, is that I lear
 
 <!-- TODO Change this -->
 
-![image2](src/components/assets/Mockup1.jpg)
-![image3](src/components/assets/Mockup2.jpg)
-![image4](src/components/assets/Mockup3.jpg)
+![image2](src/components/assets/Mockup4.jpg)
+![image3](src/components/assets/Mockup5.jpg)
+![image4](src/components/assets/Mockup6.jpg)
 <br>
 
 <!-- VIDEO DEMONSTRATION -->
@@ -230,7 +230,7 @@ See the [open issues](https://github.com/WiaanDuvenhage-200307/loldata/issues) f
 
 ## Authors
 
-- **Your Name & Surname** - [Wiaan Duvenhage](https://github.com/WiaanDuvenhage-200307)
+- **Wiaan Duvenhage** - [Wiaan Duvenhage](https://github.com/WiaanDuvenhage-200307)
 
 <!-- LICENSE -->
 
