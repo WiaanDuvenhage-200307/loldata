@@ -1,6 +1,5 @@
 import './index.css'
 import {Routes, Route} from 'react-router-dom';
-
 import Nav from "./components/Nav";
 import Dashboard from "./components/Dashboard";
 import Compare from './components/Compare';
