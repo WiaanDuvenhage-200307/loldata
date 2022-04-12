@@ -79,7 +79,6 @@ Welcome to loldata, a cool project I built using React, Node.js, chart.js 2 and 
 - [JavaScript](https://www.javascript.com/)
 - [Node.js](https://nodejs.org/en/)
 - [League of Legends Sportsdata.io API](https://sportsdata.io/)
-  > This is block quotes.
 
 <!-- GETTING STARTED -->
 <!-- Make sure to add appropriate information about what prerequesite technologies the user would need and also the steps to install your project on their own mashines -->
@@ -160,6 +159,7 @@ The `Development Process` is the technical implementations and functionality don
 
 <!-- stipulate all of the functionality you included in the project -->
 <!-- This is your time to shine, explain the technical nuances of your project, how did you achieve the final outcome!-->
+<!-- TODO : Change this! -->
 
 - I used Bulma to implement resposiveness to my web app, so that it can be viewable on both desktop and mobile.
 
@@ -188,9 +188,13 @@ The `Development Process` is the technical implementations and functionality don
 
 #### Above And Beyond
 
+<!-- TODO Change this! -->
+
 The aspects that I learned outside of lecture time and the brief, is that I learned a new framework called Bulma to make my website responsive. We were learnt Twitter Bootstrap but I wanted to go a different route and learn and implement Bulma, just to go that extra mile. It was hard but I managed to wrap my head around the framework. I lea
 
 ### Future Implementation
+
+<!-- TODO Change this! -->
 
 <!-- stipulate functionality and improvements that can be implemented in the future. -->
 
@@ -203,6 +207,8 @@ The aspects that I learned outside of lecture time and the brief, is that I lear
 
 ### Mockups
 
+<!-- TODO Change this -->
+
 ![image2](assets/img/Mockup1.jpg)
 ![image3](assets/img/Mockup2.jpg)
 ![image4](assets/img/Mockup3.jpg)
@@ -211,6 +217,8 @@ The aspects that I learned outside of lecture time and the brief, is that I lear
 <!-- VIDEO DEMONSTRATION -->
 
 ### Video Demonstration
+
+<!-- TODO Change this -->
 
 To see a run through of the application, click below:
 
@@ -242,11 +250,10 @@ Distributed under the MIT License. See `LICENSE` for more information.\
 ## Acknowledgements
 
 <!-- all resources that you used and Acknowledgements here -->
+<!-- TODO Change this -->
 
-- [League of Legends Sportsdata.io API](https://sportsdata.io/developers/api-documentation/lol)
+- [League of Legends API Docs](https://sportsdata.io/developers/api-documentation/lol)
 - [Stack Overflow](https://stackoverflow.com/)
 - [Bulma Documentation](https://bulma.io/documentation/)
-- [YouTube](https://www.youtube.com/)
-- [Wallpaper Cave](https://wallpapercave.com/w/wp7110875)
 - [Cooolors](https://coolors.co/)
 - [Figma](https://www.figma.com/)
