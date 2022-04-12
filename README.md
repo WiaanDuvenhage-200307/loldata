@@ -16,7 +16,7 @@
 <p align="center">
 
   <a href="https://github.com/WiaanDuvenhage-200307/loldata">
-    <img src="src\components\assets\new-logo.svg" alt="Logo">
+    <img src="src\components\assets\new-logo.svg" alt="Logo" width="100px">
   </a>
   
   <h3 align="center">LOLDATA</h3>
