@@ -140,17 +140,17 @@ import "https://kit.fontawesome.com/3d7d8906d0.js"
 
 ### Dashboard Features & Functionality!
 
--[image5](src/components/assets/Mockup1.jpg)
+![image5](src/components/assets/Mockup1.jpg)
 Using the API and chart.js, I populated a doughnut chart, which displays how many players play in each role. Next up using also the API and chart.js, I populated a polar chart which will display how many players originate from country x and lastly additional information will be given like how many pro players there are, how many teams are there currently and how many items are in the game.
 
 ### Compare Page Features & Functionality
 
--[image6](src/components/assets/Mockup2.jpg)
+![image6](src/components/assets/Mockup2.jpg)
 Using the API & chart.js I populated a radar chart. You need to type in the champions name, whether it is uppercase or lowercase, and it will append their statistics to the radar chart and give contextualised details on the bottom of each chart.
 
 ### Timeline Page Features & Functionality
 
--[image7](src/components/assets/Mockup3.jpg)
+![image7](src/components/assets/Mockup3.jpg)
 Again, using the API & chart.js I generated a timeline chart which will display the previous and current players, playing for the team and for how long they have been playing. When the user clicks on the dropdown they can select a team and then the team's players will be appended to the chart on the y-axis and the years of when they played will be on the x-axis.
 
 <!-- CONCEPT PROCESS -->
@@ -163,7 +163,7 @@ For my conceptual process, I took a look at websites such as Behance, Pinterest 
 
 ### Wireframes
 
--[image8](src/components/assets/Compare-1.jpg) -[image9](src/components/assets/Compare.jpg) -[image10](src/components/assets/Dasboard.jpg)
+![image8](src/components/assets/Compare-1.jpg) -[image9](src/components/assets/Compare.jpg) -[image10](src/components/assets/Dasboard.jpg)
 
 ## Development Process
 
