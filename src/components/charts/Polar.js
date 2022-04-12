@@ -28,7 +28,7 @@ const Polar = () =>{
         })
 
         
-    })
+    }, [])
 
     return(
         <div className="exCon chart">

@@ -80,3 +80,29 @@ font-family: 'Exo', sans-serif; BODY COPY */
   left: 650px;
   bottom: 100px;
 }
+
+.graph-block h3 {
+  font-size: 14px;
+  background-color: #775ffc;
+  width: 75%;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.graph-block h4 {
+  color: white;
+  padding: 5px;
+  border-radius: 20px;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.graph-block h5 {
+  color: white;
+  font-family: "Archivo Black";
+  border: 1px solid #775ffc;
+  border-radius: 30px;
+  width: 100px;
+  margin: 0 auto;
+  padding: 10px;
+}

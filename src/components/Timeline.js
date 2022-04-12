@@ -6,8 +6,10 @@ const Timeline = () => {
         <>
             <div className='intro'>
                 <h2>Timeline</h2>
-                <br/>
-                <p>Here is a timeline for when all the major tournaments are held throughout the year!</p>
+                <div className='welcomeMsg'>
+                <h3>Welcome to the Timeline!</h3>
+                <p className='more-info'>Take a look at how long each player played for your favourite team by selecting a team below!</p> 
+            </div>
             </div>
             <div className='time-block'>
                 <h2>Teams</h2>
