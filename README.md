@@ -110,6 +110,18 @@ Here are a couple of ways to clone this repo:
     npm install axios
     ```
 
+    ```sh
+    npm install react-chartjs-2 --save
+    ```
+
+    ```sh
+    npm install react-router-dom
+    ```
+
+    ```sh
+    npm install react-browser-router --save
+    ```
+
 4.  An API key is not required
 
 <!-- FEATURES AND FUNCTIONALITY-->
