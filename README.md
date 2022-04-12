@@ -16,7 +16,7 @@
 <p align="center">
 
   <a href="https://github.com/WiaanDuvenhage-200307/loldata">
-    <img src="assets\new-logo.svg" alt="Logo">
+    <img src="src\components\assets\new-logo.svg" alt="Logo">
   </a>
   
   <h3 align="center">LOLDATA</h3>
@@ -74,8 +74,8 @@ Welcome to loldata, a cool project I built using React, Node.js, chart.js 2 and 
 
 ### Built With
 
-- [React](https://whatwg.org/)
-- [Chart.js 2](https://www.w3.org/Style/CSS/Overview.en.html)
+- [React](https://reactjs.org/)
+- [Chart.js 2](https://www.chartjs.org/)
 - [JavaScript](https://www.javascript.com/)
 - [Node.js](https://nodejs.org/en/)
 - [League of Legends Sportsdata.io API](https://sportsdata.io/)
@@ -122,7 +122,7 @@ Here are a couple of ways to clone this repo:
     npm install react-browser-router --save
     ```
 
-4.  An API key is not required
+4.  An API key IS required for this app to work. You would need to register on Sportsdata.io first <a href="https://sportsdata.io/user/register">here</a>.
 
 <!-- FEATURES AND FUNCTIONALITY-->
 <!-- You can add the links to all of your imagery at the bottom of the file as references -->
@@ -240,7 +240,7 @@ Distributed under the MIT License. See `LICENSE` for more information.\
 
 <!-- all resources that you used and Acknowledgements here -->
 
-- [Rick n Morty API](https://rickandmortyapi.com/)
+- [League of Legends Sportsdata.io API](https://sportsdata.io/developers/api-documentation/lol)
 - [Stack Overflow](https://stackoverflow.com/)
 - [Bulma Documentation](https://bulma.io/documentation/)
 - [YouTube](https://www.youtube.com/)
