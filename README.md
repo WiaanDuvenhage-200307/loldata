@@ -26,7 +26,7 @@
     
    <br />
    <br />
-   <a href="">View Demo</a>
+   <a href="https://youtu.be/y_ktyHSNhaM">View Demo</a>
     ·
     <a href="https://github.com/WiaanDuvenhage-200307/loldata/issues">Report Bug</a>
     ·
@@ -124,6 +124,13 @@ Here are a couple of ways to clone this repo:
 
 4.  An API key IS required for this app to work. You would need to register on Sportsdata.io first <a href="https://sportsdata.io/user/register">here</a>.
 
+5.  Import Font Awesome Library
+    In your component you want to use the font awesome icons use this `import`
+
+```sh
+import "https://kit.fontawesome.com/3d7d8906d0.js"
+```
+
 <!-- FEATURES AND FUNCTIONALITY-->
 <!-- You can add the links to all of your imagery at the bottom of the file as references -->
 
@@ -131,17 +138,20 @@ Here are a couple of ways to clone this repo:
 
 <!-- note how you can use your gitHub link. Just make a path to your assets folder -->
 
-### All the characters shown on Rick and Morty!
+### Dashboard Features & Functionality!
 
-Using the Rick and Morty API, we are displaying the characters, which the user can randomise again.
+-[image5](src/components/assets/Mockup1.jpg)
+Using the API and chart.js, I populated a doughnut chart, which displays how many players play in each role. Next up using also the API and chart.js, I populated a polar chart which will display how many players originate from country x and lastly additional information will be given like how many pro players there are, how many teams are there currently and how many items are in the game.
 
-### Feature 2
+### Compare Page Features & Functionality
 
-Using 2 `.json` files that I created, you complete a quiz, which will give you the best episode to watch based on your answers.
+-[image6](src/components/assets/Mockup2.jpg)
+Using the API & chart.js I populated a radar chart. You need to type in the champions name, whether it is uppercase or lowercase, and it will append their statistics to the radar chart and give contextualised details on the bottom of each chart.
 
-### Feature 3
+### Timeline Page Features & Functionality
 
-Using `.php` I have added a feedback form to send any emails to me on changes that I can implement on this project.
+-[image7](src/components/assets/Mockup3.jpg)
+Again, using the API & chart.js I generated a timeline chart which will display the previous and current players, playing for the team and for how long they have been playing. When the user clicks on the dropdown they can select a team and then the team's players will be appended to the chart on the y-axis and the years of when they played will be on the x-axis.
 
 <!-- CONCEPT PROCESS -->
 <!-- Briefly explain your concept ideation process -->
@@ -151,29 +161,35 @@ Using `.php` I have added a feedback form to send any emails to me on changes th
 
 For my conceptual process, I took a look at websites such as Behance, Pinterest and Siteinspire. I also watched a few Rick and Morty episodes and took a look at the colors and played around with them in Figma and looked at sites like cooolors.co to have a sense of a good color palette.
 
+### Wireframes
+
+-[image8](src/components/assets/Compare-1.jpg) -[image9](src/components/assets/Compare.jpg) -[image10](src/components/assets/Dasboard.jpg)
+
 ## Development Process
 
 The `Development Process` is the technical implementations and functionality done in the frontend and backend of the application.
 
 ### Implementation Process
 
-<!-- stipulate all of the functionality you included in the project -->
-<!-- This is your time to shine, explain the technical nuances of your project, how did you achieve the final outcome!-->
-<!-- TODO : Change this! -->
+- I used React, Chart.js, Node.js and an API endpoint to create this project. I implemented component-based development instead of classes. By doing this, I will be able to easily inject and eject components and sub-components into my project, making it refactorable and reusable instead of writing up classes I have to do everytime making it tedious and redundant. I also used the `{Link}` component from the `react-router-dom` dependency to navigate to my pages without the DOM flashing.
 
-- I used Bulma to implement resposiveness to my web app, so that it can be viewable on both desktop and mobile.
+-I also implemented a Font-Awesome icon library and used it for my navigation buttons
 
-- I created a quiz and using logic I made that when you enter a question it goes to another question and upon completing the quiz, it will give you an episode of Rick and Morty to watch (it is randomized). I displayed the question using a `.json` file that I created myself and jQuery `.fadeIn()` & `.hide()` events to show questions I have not answers and hide those that I have answered while simultaneously appending pictures for the questions to the dom from a `.json` file that I also created and populated.
+- I implemented the `Browser Router` and `routing` into my project to use navigate to my various components. I also implemented seperate CSS files for each component that I created. I made all these components and I injected them in my `App.js` and used `index.js`for injecting my `BrowserRouter` to navigate to my pages/components.
 
-- For my character list I created getJSON() function that will get all the data from the characters. Inside of that function I then appended them to the DOM with the relative styling in a card format using Bulma's card default styling properties. I then wrote some logic to display their status in different colors. For example, I wrote an if() that would check if the status name is strongly equals to dead and append it to the dom and make a red block around the word "dead" and did an else if for the status name alive and unknown.
+- For the dashboard I used React hooks like `useEffect, useState` to populate my charts and injecting `jsx` into my chart components so that I can view data from the API and see for example how many players are there per role. I wrote the data of my chart as a variable and in my `return` function I wrote `jsx` in my chart component for it to populate with API data.
 
-- Furthermore, I appended the characters to the dom and added a "give me more characters" button which will generate a new set of characters. To do this I created a `const` variable that had a `Math.floor(Math.random())` function assigned to it that gave me a random number between 1 and 43, which was the page numbers of all the characters (You access the characters and their relative data according to a page number in the API endpoint). I then concatenated this random number variable with my API endpoint and appended that randomnumber function, using jQuery's `.click()` event to run whenever the user clicks on the "give me more characters" button, after the user clicks the whole page reloads. I did that by adding a `window.location.reload();` function that I bound to the "give me more characters" button.
+- For the compare page I had the same approach, but I used the `useRef` hook as well to reference to the search button that I am typing into. Something I also did different was my entire chart component was written in the `return` function. So whenever a user types in a champion's name it will check for it in the API and if it matches it will populate the chart with the champion's name, title and their stats.
+
+- And lastly, for the timeline page, I used the exact same concept for the compare page but instead of a search bar it is a dropdown of all the teams currently. I dynamically populated the dropdown with a `Array.map()` function and populated it with the team names from the API Data. It then checks if what the user clicks is valid and it populates the chart with the previous and current teammates of that clicked team.
 
 #### Highlights
 
 <!-- stipulated the highlight you experienced with the project -->
 
 - The highlight of this project was definitely working with React and Chart.js, implementing them and seeing how components work together along with the API data to create a sleek front-end design.
+
+-Another highlight is seeing how the API data dynamically populates with the chart's and seeing how they function.
 
 #### Challenges
 
@@ -190,7 +206,7 @@ The `Development Process` is the technical implementations and functionality don
 
 <!-- TODO Change this! -->
 
-The aspects that I learned outside of lecture time and the brief, is that I learned a new framework called Bulma to make my website responsive. We were learnt Twitter Bootstrap but I wanted to go a different route and learn and implement Bulma, just to go that extra mile. It was hard but I managed to wrap my head around the framework. I lea
+The aspects I learned outside of class time is that I made a timeline chart using a Bar chart but I managed to swap the x and y-axis around and that I managed to showcase the bar chart as a gantt chart, which is really cool!
 
 ### Future Implementation
 
@@ -198,8 +214,13 @@ The aspects that I learned outside of lecture time and the brief, is that I lear
 
 <!-- stipulate functionality and improvements that can be implemented in the future. -->
 
-- My future implementation is to redo the entire test page and make it look more sleek and have better UX
-- I would also most likely redo this entire project, because it is not created and presented to my standard. I will most probably redo the project using a different framework like Tailwind CSS or a framework I am familiar with, which is Bootstrap.
+- My future implementation plannings are that I want to fix the timeline chart bug so that it will not only show the data once I zoom out or inspect the page.
+
+- Another implementation I want to do is by making the page responsive by implementing some kind of framework like Bootstrap of Tailwind-CSS.
+
+-I also want to make it more visually appealing by adding the image of the champion on the compare page instead of just its name, but I think I would need a better API that will give me more data to work with.
+
+- I also want to add a "next tournament section" to the dashboard to show when is the next tournament and a countdown of it. Alongside that I want to add a "previous result" section which will show what team just played and who won.
 
 <!-- MOCKUPS -->
 
@@ -222,7 +243,7 @@ The aspects that I learned outside of lecture time and the brief, is that I lear
 
 To see a run through of the application, click below:
 
-[View Demonstration](https://youtu.be/BMsNp2b9rIk)
+[View Demonstration](https://youtu.be/y_ktyHSNhaM)
 
 See the [open issues](https://github.com/WiaanDuvenhage-200307/loldata/issues) for a list of proposed features (and known issues).
 
@@ -254,6 +275,8 @@ Distributed under the MIT License. See `LICENSE` for more information.\
 
 - [League of Legends API Docs](https://sportsdata.io/developers/api-documentation/lol)
 - [Stack Overflow](https://stackoverflow.com/)
-- [Bulma Documentation](https://bulma.io/documentation/)
+- [Make my Download](https://makemydownload.com/635c1e8667630008)
+- [removebg](https://www.remove.bg/)
+- [Font Awesome](https://fontawesome.com/)
 - [Cooolors](https://coolors.co/)
 - [Figma](https://www.figma.com/)
