@@ -106,3 +106,11 @@ font-family: 'Exo', sans-serif; BODY COPY */
   margin: 0 auto;
   padding: 10px;
 }
+
+.total-players h5 {
+  width: 40px;
+}
+
+.total-players select {
+  width: auto;
+}

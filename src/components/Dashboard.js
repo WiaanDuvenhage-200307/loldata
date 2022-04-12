@@ -2,7 +2,7 @@ import './Dashboard.css';
 import axios from 'axios';
 import PieChart from './charts/DoughnutChart';
 import Polar from './charts/Polar';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import image from '../components/assets/2833617__1_-removebg-preview.png';
 
 
@@ -15,6 +15,14 @@ const Dashboard = () => {
     const [percent2, setPercent2] = useState();
 
     const [rolePercent, setRolePercent] = useState();
+    const [rolePercent2, setRolePercent2] = useState();
+
+    const [totalPlayers, setTotalPlayers] = useState();
+
+    const [allTeams, setAllTeams] = useState();
+
+    const [items, setItems] = useState();
+
 
     useEffect(() =>{
         axios.get("https://api.sportsdata.io/v3/lol/scores/json/Players?key=94c287b249d74701adf60e03aa398884")
@@ -38,6 +46,8 @@ const Dashboard = () => {
 
             setPercent1(koreanPercent);
             setPercent2(denmarkPercent);
+
+            setTotalPlayers(data.length);
             
         })
 
@@ -49,6 +59,7 @@ const Dashboard = () => {
         .then((res)=>{
             let data = res.data;
 
+            // Sets the total number of players in each role
             let topLaners = data.filter((item)=> item.Position === "Top").length;
             let junglers = data.filter((item)=> item.Position === "Jungle").length;
             let midLaners = data.filter((item)=> item.Position === "Mid").length;
@@ -56,26 +67,37 @@ const Dashboard = () => {
             let supports = data.filter((item)=> item.Position === "Support").length;
 
             let allPlayers = topLaners + junglers + midLaners + bottomLaners + supports;
+
+            // Looks for total number of players in all roles
             let allRoles = [topLaners, junglers, midLaners, bottomLaners, supports].length;
 
             console.log(allRoles);
 
-            let topPercent = (Math.round(topLaners * 100) / allPlayers).toFixed(1);
             let junglePercent = (Math.round(junglers * 100) / allPlayers).toFixed(1);
-            let midPercent = (Math.round(midLaners * 100) / allPlayers).toFixed(1);
-            let bottomPercent = (Math.round(bottomLaners * 100) / allPlayers).toFixed(1);
-            let supportPercent = (Math.round(supports * 100) / allPlayers).toFixed(1);
 
-            let getAvgPercent = (Math.round(topPercent + junglePercent + midPercent + bottomPercent + supportPercent/allRoles/5)).toFixed(1);
-            console.log(topPercent)
+            setRolePercent2(junglePercent);
+        })
+    }, [])
 
-            setRolePercent(getAvgPercent);
+    useEffect(()=>{
+        axios.get("https://api.sportsdata.io/v3/lol/scores/json/Teams?key=94c287b249d74701adf60e03aa398884")
+        .then((res)=>{
+            let data = res.data;
+
+            setAllTeams(data.length);
             
+        })
+
+        axios.get("https://api.sportsdata.io/v3/lol/stats/json/Items?key=94c287b249d74701adf60e03aa398884")
+        .then((res)=>{
+            let itemData = res.data;
+
+            setItems(itemData.length);
         })
     }, [])
 
     
-    
+
     return(
 
     <>
@@ -94,7 +116,8 @@ const Dashboard = () => {
             <h2>Players per Role</h2>
             <h3>How many players, play each role?</h3>
             <PieChart/>
-            <h4>{rolePercent}</h4>
+            <h4> Looks like the jungle role has the most players!</h4>
+            <h5>Jungle {rolePercent2}%</h5>
         </div>
 
         {/* MAKE BAR CHART */}
@@ -107,9 +130,16 @@ const Dashboard = () => {
         </div>
 
         <div className='graph-block total-players'>
-            <h3>Player Statistics</h3>
+            <h3>Other Information</h3>
 
+            <h4>Current Pro Players</h4>
+            <h5>{totalPlayers}</h5>
 
+            <h4>Amount of Teams</h4>
+            <h5>{allTeams}</h5>
+
+            <h4>Amount of item in the game</h4>
+            <h5>{items}</h5>
         </div>
 
         

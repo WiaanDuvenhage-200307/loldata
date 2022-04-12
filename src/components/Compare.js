@@ -213,7 +213,7 @@ const Compare = () => {
                                     color: 'white'
                                 },
                                 pointLabels:{
-                                        color: '#A379C9',
+                                        color: 'rgb(82, 51, 251)',
                                         font: 'bold'
                                 },
                                 ticks: {
