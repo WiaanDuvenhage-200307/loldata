@@ -138,7 +138,7 @@ const Dashboard = () => {
             <h4>Amount of Teams</h4>
             <h5>{allTeams}</h5>
 
-            <h4>Amount of item in the game</h4>
+            <h4>Amount of items in the game</h4>
             <h5>{items}</h5>
         </div>
 
